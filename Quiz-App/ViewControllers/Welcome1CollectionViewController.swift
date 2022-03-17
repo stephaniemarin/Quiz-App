@@ -7,6 +7,7 @@
 
 import UIKit
 
+/*
 class WelcomeCollectionViewController: UICollectionViewController {
 
     var imageData = ["swift"]
@@ -65,3 +66,4 @@ class WelcomeCollectionViewController: UICollectionViewController {
   
 
 }
+*/

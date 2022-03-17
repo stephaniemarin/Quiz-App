@@ -94,7 +94,7 @@
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHv-ZU-h4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4326.086956521739" y="-388.39285714285711"/>
+            <point key="canvasLocation" x="-1559" y="400"/>
         </scene>
         <!--LoginVC-->
         <scene sceneID="uOS-w7-nFP">

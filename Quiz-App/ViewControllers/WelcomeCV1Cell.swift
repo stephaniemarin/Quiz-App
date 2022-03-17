@@ -6,7 +6,7 @@
 //
 
 import UIKit
-
+/*
 class WelcomeCVCell: UICollectionViewCell {
     
     @IBOutlet weak var quizTitle: UILabel!
@@ -14,3 +14,4 @@ class WelcomeCVCell: UICollectionViewCell {
     
     
 }
+*/
