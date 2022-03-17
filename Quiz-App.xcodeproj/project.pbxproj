@@ -16,6 +16,9 @@
 		9030E07827E2A4B30026ED31 /* Quiz_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E07727E2A4B30026ED31 /* Quiz_AppTests.swift */; };
 		9030E08227E2A4B30026ED31 /* Quiz_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E08127E2A4B30026ED31 /* Quiz_AppUITests.swift */; };
 		9030E08427E2A4B30026ED31 /* Quiz_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E08327E2A4B30026ED31 /* Quiz_AppUITestsLaunchTests.swift */; };
+		9030E09327E2BAF70026ED31 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09227E2BAF70026ED31 /* LogInViewController.swift */; };
+		9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09427E2BB090026ED31 /* SingUpViewController.swift */; };
+		9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09627E2BB270026ED31 /* CategoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		9030E07D27E2A4B30026ED31 /* Quiz-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiz-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9030E08127E2A4B30026ED31 /* Quiz_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppUITests.swift; sourceTree = "<group>"; };
 		9030E08327E2A4B30026ED31 /* Quiz_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9030E09227E2BAF70026ED31 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		9030E09427E2BB090026ED31 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
+		9030E09627E2BB270026ED31 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +107,8 @@
 			children = (
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
 				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
-				9030E06427E2A4B20026ED31 /* ViewController.swift */,
-				9030E06627E2A4B20026ED31 /* Main.storyboard */,
+				9030E09127E2BAC40026ED31 /* ViewControllers */,
+				9030E09027E2B8D00026ED31 /* storyboard */,
 				9030E06927E2A4B30026ED31 /* Assets.xcassets */,
 				9030E06B27E2A4B30026ED31 /* LaunchScreen.storyboard */,
 				9030E06E27E2A4B30026ED31 /* Info.plist */,
@@ -125,6 +131,25 @@
 				9030E08327E2A4B30026ED31 /* Quiz_AppUITestsLaunchTests.swift */,
 			);
 			path = "Quiz-AppUITests";
+			sourceTree = "<group>";
+		};
+		9030E09027E2B8D00026ED31 /* storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				9030E06627E2A4B20026ED31 /* Main.storyboard */,
+			);
+			path = storyboard;
+			sourceTree = "<group>";
+		};
+		9030E09127E2BAC40026ED31 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				9030E06427E2A4B20026ED31 /* ViewController.swift */,
+				9030E09227E2BAF70026ED31 /* LogInViewController.swift */,
+				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
+				9030E09627E2BB270026ED31 /* CategoryViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +283,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9030E09327E2BAF70026ED31 /* LogInViewController.swift in Sources */,
 				9030E06527E2A4B20026ED31 /* ViewController.swift in Sources */,
+				9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */,
 				9030E06127E2A4B20026ED31 /* AppDelegate.swift in Sources */,
+				9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */,
 				9030E06327E2A4B20026ED31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
