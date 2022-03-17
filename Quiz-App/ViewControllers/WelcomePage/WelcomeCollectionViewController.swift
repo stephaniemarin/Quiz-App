@@ -11,7 +11,7 @@ import UIKit
 class WelcomeCollectionViewController: UICollectionViewController{
     
     var imageData = ["swift", "java", "python"]
-    
+    var TextData = ["Login","Pay","Feedback","Swift Language", "Programming","IOS"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,43 +54,47 @@ class WelcomeCollectionViewController: UICollectionViewController{
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 3
+        return 1
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let welCell1 = collectionView.dequeueReusableCell(withReuseIdentifier: "welCell1", for: indexPath) as! WelcomeCollectionViewCell
-        let welCell2 = collectionView.dequeueReusableCell(withReuseIdentifier: "welCell2", for: indexPath) as! WelcomeCollectionViewCell
-        let welCell3 = collectionView.dequeueReusableCell(withReuseIdentifier: "welCell3", for: indexPath) as! WelcomeCollectionViewCell
-    
+        let loginCell = collectionView.dequeueReusableCell(withReuseIdentifier: "loginCell", for: indexPath) as! WelcomeCollectionViewCell
+        
+        let welCell = collectionView.dequeueReusableCell(withReuseIdentifier: "welCell", for: indexPath) as! WelcomeCollectionViewCell
+        let quizCell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! WelcomeCollectionViewCell
+
         switch indexPath.section{
         case 0:
-            welCell1.swiftImg.image = UIImage(named: imageData[indexPath.row])
+           // welCell1.swiftImg.image = UIImage(named: imageData[indexPath.row])
+            loginCell.loginbtn
             
-            return welCell1
+            return loginCell
         case 1:
-            welCell2.javaImg.image = UIImage(named: imageData[indexPath.row])
-            return welCell2
-        case 3:
-            welCell3.pythonImg.image = UIImage(named: imageData[indexPath.row])
-            return welCell3
+            //welCell2.javaImg.image = UIImage(named: imageData[indexPath.row])
+            welCell.welcometx
+            return welCell
+        case 2:
+            quizCell.quizbtn
+            return quizCell
         default:
-            return welCell1
+            return loginCell
         }
     }
     
     private func generateLayout() ->UICollectionViewLayout{
        //item size
         let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(3.0), heightDimension: .fractionalHeight(3.0))
+        
         // declaring item
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         //group size
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(70.0))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(50.0))
         //declaring group horizontal
         let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
         //section
@@ -99,6 +103,27 @@ class WelcomeCollectionViewController: UICollectionViewController{
         
         return layout
         //after this tell viewdidload() to use the new layout
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        switch indexPath.section {
+        case 0:
+//            let sb1 : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let tcv = sb1.instantiateViewController(withIdentifier: "CreateAccount") as! CreateAccountVC
+//            present(tcv, animated: true, completion: nil)
+//
+            performSegue(withIdentifier: "showCreate", sender: nil)
+        case 1:
+            print("You are in welcome")
+        case 2:
+//            let sb1 : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//            let tcv = sb1.instantiateViewController(withIdentifier: "QuizOneTVC") as! CreateAccountVC
+//            present(tcv, animated: true, completion: nil)
+            performSegue(withIdentifier: "showQuiz1", sender: nil)
+        default:
+            print("wrong choice")
+    }
+        
     }
 
     // MARK: UICollectionViewDelegate

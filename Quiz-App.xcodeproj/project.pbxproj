@@ -200,13 +200,10 @@
 				9030E0CD27E369E60026ED31 /* WelcomePage */,
 				9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */,
 				9030E09E27E34E6C0026ED31 /* CollectionVC.swift */,
-				9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */,
-				9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */,
+				9030E0D227E391830026ED31 /* oldNonworking */,
 				D08ED70227E37B20006453C6 /* FeedbackVC.swift */,
 				9030E09227E2BAF70026ED31 /* LogInViewController.swift */,
 				D08ED70D27E37F51006453C6 /* QuizOneTVC.swift */,
-				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
-				9030E09627E2BB270026ED31 /* CategoryViewController.swift */,
 				9030E0A927E34F350026ED31 /* PayVC.swift */,
 			);
 			path = ViewControllers;
@@ -243,6 +240,17 @@
 				9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */,
 			);
 			path = WelcomePage;
+			sourceTree = "<group>";
+		};
+		9030E0D227E391830026ED31 /* oldNonworking */ = {
+			isa = PBXGroup;
+			children = (
+				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
+				9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */,
+				9030E09627E2BB270026ED31 /* CategoryViewController.swift */,
+				9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */,
+			);
+			path = oldNonworking;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

@@ -9,10 +9,14 @@ import UIKit
 
 class WelcomeCollectionViewCell: UICollectionViewCell {
 
-    
+    //buttons
+    @IBOutlet weak var loginbtn: UIButton!
+    @IBOutlet weak var quizbtn: UIButton!
+    //labels
+    @IBOutlet weak var welcometx: UILabel!
+    //images
     @IBOutlet weak var swiftImg: UIImageView!
     @IBOutlet weak var javaImg: UIImageView!
     @IBOutlet weak var pythonImg: UIImageView!
-    
     
 }
