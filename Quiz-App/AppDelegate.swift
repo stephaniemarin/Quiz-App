@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  Quiz-App
+//  IOS_QUIZ
 //
-//  Created by Stephanie Marin Velasquez on 3/16/22.
+//  Created by stephen weber on 3/11/22.
 //
 
 import UIKit

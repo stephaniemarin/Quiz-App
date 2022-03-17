@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		9030E06127E2A4B20026ED31 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E06027E2A4B20026ED31 /* AppDelegate.swift */; };
 		9030E06327E2A4B20026ED31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E06227E2A4B20026ED31 /* SceneDelegate.swift */; };
-		9030E06527E2A4B20026ED31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E06427E2A4B20026ED31 /* ViewController.swift */; };
 		9030E06827E2A4B20026ED31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030E06627E2A4B20026ED31 /* Main.storyboard */; };
 		9030E06A27E2A4B30026ED31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9030E06927E2A4B30026ED31 /* Assets.xcassets */; };
 		9030E06D27E2A4B30026ED31 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030E06B27E2A4B30026ED31 /* LaunchScreen.storyboard */; };
@@ -19,6 +18,21 @@
 		9030E09327E2BAF70026ED31 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09227E2BAF70026ED31 /* LogInViewController.swift */; };
 		9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09427E2BB090026ED31 /* SingUpViewController.swift */; };
 		9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09627E2BB270026ED31 /* CategoryViewController.swift */; };
+		9030E09927E2C2400026ED31 /* WelcomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09827E2C2400026ED31 /* WelcomeCollectionViewController.swift */; };
+		9030E09B27E2C2EB0026ED31 /* WelcomeCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09A27E2C2EB0026ED31 /* WelcomeCVCell.swift */; };
+		9030E09D27E34D280026ED31 /* AdminDataBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */; };
+		9030E09F27E34E6C0026ED31 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09E27E34E6C0026ED31 /* CollectionVC.swift */; };
+		9030E0A127E34EBB0026ED31 /* FeedbackVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0A027E34EBB0026ED31 /* FeedbackVC.swift */; };
+		9030E0AB27E34F3F0026ED31 /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0A927E34F350026ED31 /* PayVC.swift */; };
+		9030E0AD27E34F660026ED31 /* QuizOneDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0AC27E34F660026ED31 /* QuizOneDB.swift */; };
+		9030E0B127E34F7B0026ED31 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B027E34F7B0026ED31 /* ViewCell.swift */; };
+		9030E0B927E34F9F0026ED31 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B327E34F9F0026ED31 /* ViewController.swift */; };
+		9030E0BA27E34F9F0026ED31 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B427E34F9F0026ED31 /* LoginVC.swift */; };
+		9030E0BB27E34F9F0026ED31 /* KeychainWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B527E34F9F0026ED31 /* KeychainWrapper.swift */; };
+		9030E0BC27E34F9F0026ED31 /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B627E34F9F0026ED31 /* CreateAccountVC.swift */; };
+		9030E0BD27E34F9F0026ED31 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B727E34F9F0026ED31 /* CheckBox.swift */; };
+		9030E0BE27E34F9F0026ED31 /* KeychainItemAccessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B827E34F9F0026ED31 /* KeychainItemAccessibility.swift */; };
+		9030E0C127E35ADF0026ED31 /* TableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0C027E35ADF0026ED31 /* TableVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +56,9 @@
 		9030E05D27E2A4B20026ED31 /* Quiz-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quiz-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9030E06027E2A4B20026ED31 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9030E06227E2A4B20026ED31 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		9030E06427E2A4B20026ED31 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		9030E06727E2A4B20026ED31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9030E06927E2A4B30026ED31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9030E06C27E2A4B30026ED31 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		9030E06E27E2A4B30026ED31 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9030E07327E2A4B30026ED31 /* Quiz-AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiz-AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9030E07727E2A4B30026ED31 /* Quiz_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quiz_AppTests.swift; sourceTree = "<group>"; };
 		9030E07D27E2A4B30026ED31 /* Quiz-AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quiz-AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,6 +67,23 @@
 		9030E09227E2BAF70026ED31 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		9030E09427E2BB090026ED31 /* SingUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingUpViewController.swift; sourceTree = "<group>"; };
 		9030E09627E2BB270026ED31 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
+		9030E09827E2C2400026ED31 /* WelcomeCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewController.swift; sourceTree = "<group>"; };
+		9030E09A27E2C2EB0026ED31 /* WelcomeCVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCVCell.swift; sourceTree = "<group>"; };
+		9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminDataBaseVC.swift; path = "Quiz-App/AdminDataBaseVC.swift"; sourceTree = SOURCE_ROOT; };
+		9030E09E27E34E6C0026ED31 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionVC.swift; path = "Quiz-App/CollectionVC.swift"; sourceTree = SOURCE_ROOT; };
+		9030E0A027E34EBB0026ED31 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FeedbackVC.swift; path = "Quiz-App/FeedbackVC.swift"; sourceTree = SOURCE_ROOT; };
+		9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOS_QUIZ.entitlements; sourceTree = "<group>"; };
+		9030E0A927E34F350026ED31 /* PayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayVC.swift; path = "Quiz-App/ViewControllers/PayVC.swift"; sourceTree = SOURCE_ROOT; };
+		9030E0AC27E34F660026ED31 /* QuizOneDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOneDB.swift; sourceTree = "<group>"; };
+		9030E0B027E34F7B0026ED31 /* ViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewCell.swift; sourceTree = "<group>"; };
+		9030E0B327E34F9F0026ED31 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		9030E0B427E34F9F0026ED31 /* LoginVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		9030E0B527E34F9F0026ED31 /* KeychainWrapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainWrapper.swift; sourceTree = "<group>"; };
+		9030E0B627E34F9F0026ED31 /* CreateAccountVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
+		9030E0B727E34F9F0026ED31 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		9030E0B827E34F9F0026ED31 /* KeychainItemAccessibility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainItemAccessibility.swift; sourceTree = "<group>"; };
+		9030E0C027E35ADF0026ED31 /* TableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableVC.swift; sourceTree = "<group>"; };
+		9030E0C927E3643D0026ED31 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +115,7 @@
 			isa = PBXGroup;
 			children = (
 				9030E05F27E2A4B20026ED31 /* Quiz-App */,
+				9030E0BF27E35ADF0026ED31 /* QUIZ Section */,
 				9030E07627E2A4B30026ED31 /* Quiz-AppTests */,
 				9030E08027E2A4B30026ED31 /* Quiz-AppUITests */,
 				9030E05E27E2A4B20026ED31 /* Products */,
@@ -105,13 +135,16 @@
 		9030E05F27E2A4B20026ED31 /* Quiz-App */ = {
 			isa = PBXGroup;
 			children = (
+				9030E0C927E3643D0026ED31 /* Info.plist */,
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
 				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
+				9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */,
+				9030E0AC27E34F660026ED31 /* QuizOneDB.swift */,
+				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
+				9030E0B227E34F9F0026ED31 /* Login */,
 				9030E09127E2BAC40026ED31 /* ViewControllers */,
 				9030E09027E2B8D00026ED31 /* storyboard */,
 				9030E06927E2A4B30026ED31 /* Assets.xcassets */,
-				9030E06B27E2A4B30026ED31 /* LaunchScreen.storyboard */,
-				9030E06E27E2A4B30026ED31 /* Info.plist */,
 			);
 			path = "Quiz-App";
 			sourceTree = "<group>";
@@ -136,6 +169,7 @@
 		9030E09027E2B8D00026ED31 /* storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				9030E06B27E2A4B30026ED31 /* LaunchScreen.storyboard */,
 				9030E06627E2A4B20026ED31 /* Main.storyboard */,
 			);
 			path = storyboard;
@@ -144,12 +178,38 @@
 		9030E09127E2BAC40026ED31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				9030E06427E2A4B20026ED31 /* ViewController.swift */,
+				9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */,
+				9030E09E27E34E6C0026ED31 /* CollectionVC.swift */,
+				9030E0A027E34EBB0026ED31 /* FeedbackVC.swift */,
+				9030E09827E2C2400026ED31 /* WelcomeCollectionViewController.swift */,
+				9030E09A27E2C2EB0026ED31 /* WelcomeCVCell.swift */,
 				9030E09227E2BAF70026ED31 /* LogInViewController.swift */,
 				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
 				9030E09627E2BB270026ED31 /* CategoryViewController.swift */,
+				9030E0A927E34F350026ED31 /* PayVC.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		9030E0B227E34F9F0026ED31 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				9030E0B327E34F9F0026ED31 /* ViewController.swift */,
+				9030E0B427E34F9F0026ED31 /* LoginVC.swift */,
+				9030E0B527E34F9F0026ED31 /* KeychainWrapper.swift */,
+				9030E0B627E34F9F0026ED31 /* CreateAccountVC.swift */,
+				9030E0B727E34F9F0026ED31 /* CheckBox.swift */,
+				9030E0B827E34F9F0026ED31 /* KeychainItemAccessibility.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		9030E0BF27E35ADF0026ED31 /* QUIZ Section */ = {
+			isa = PBXGroup;
+			children = (
+				9030E0C027E35ADF0026ED31 /* TableVC.swift */,
+			);
+			path = "QUIZ Section";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -284,10 +344,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				9030E09327E2BAF70026ED31 /* LogInViewController.swift in Sources */,
-				9030E06527E2A4B20026ED31 /* ViewController.swift in Sources */,
+				9030E0A127E34EBB0026ED31 /* FeedbackVC.swift in Sources */,
+				9030E0BA27E34F9F0026ED31 /* LoginVC.swift in Sources */,
+				9030E09D27E34D280026ED31 /* AdminDataBaseVC.swift in Sources */,
+				9030E0B127E34F7B0026ED31 /* ViewCell.swift in Sources */,
 				9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */,
+				9030E0BB27E34F9F0026ED31 /* KeychainWrapper.swift in Sources */,
+				9030E09F27E34E6C0026ED31 /* CollectionVC.swift in Sources */,
+				9030E0BE27E34F9F0026ED31 /* KeychainItemAccessibility.swift in Sources */,
+				9030E0BC27E34F9F0026ED31 /* CreateAccountVC.swift in Sources */,
+				9030E0AB27E34F3F0026ED31 /* PayVC.swift in Sources */,
+				9030E09B27E2C2EB0026ED31 /* WelcomeCVCell.swift in Sources */,
+				9030E0BD27E34F9F0026ED31 /* CheckBox.swift in Sources */,
+				9030E0C127E35ADF0026ED31 /* TableVC.swift in Sources */,
 				9030E06127E2A4B20026ED31 /* AppDelegate.swift in Sources */,
+				9030E0B927E34F9F0026ED31 /* ViewController.swift in Sources */,
+				9030E0AD27E34F660026ED31 /* QuizOneDB.swift in Sources */,
 				9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */,
+				9030E09927E2C2400026ED31 /* WelcomeCollectionViewController.swift in Sources */,
 				9030E06327E2A4B20026ED31 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
