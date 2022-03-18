@@ -726,55 +726,78 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tA-Pj7">
-                                <rect key="frame" x="0.0" y="195" width="414" height="238"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tA-Pj7">
+                                <rect key="frame" x="0.0" y="195" width="414" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="LHB-6v-qjW"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Is this Correct Swift Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-sq-imU">
-                                <rect key="frame" x="0.0" y="113" width="414" height="58"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Is this Correct Swift Code" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-sq-imU">
+                                <rect key="frame" x="0.0" y="86" width="414" height="58"/>
                                 <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-Kn-6Le">
-                                <rect key="frame" x="172" y="754" width="67" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your answer is good or bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3un-k3-Qfy">
-                                <rect key="frame" x="0.0" y="487" width="414" height="68"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Your answer is good or bad" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3un-k3-Qfy">
+                                <rect key="frame" x="0.0" y="478" width="414" height="68"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-gV-X35">
-                                <rect key="frame" x="124" y="596" width="53" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="True"/>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-QC-bAf">
-                                <rect key="frame" x="205" y="596" width="58" height="31"/>
+                                <rect key="frame" x="232" y="548" width="86" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="False"/>
+                                <buttonConfiguration key="configuration" style="filled" title="False" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="clickedFalse:" destination="zVA-2n-UuY" eventType="touchUpInside" id="ejC-aG-2QP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOb-gV-X35">
+                                <rect key="frame" x="112" y="548" width="83" height="48"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="True" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="clickedTrue:" destination="zVA-2n-UuY" eventType="touchUpInside" id="RBD-YI-BDr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QYV-Kn-6Le">
+                                <rect key="frame" x="148" y="630" width="119" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Continue" cornerStyle="capsule"/>
+                                <connections>
+                                    <action selector="nextQuestion:" destination="zVA-2n-UuY" eventType="touchUpInside" id="BtF-8w-3Fx"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MZ1-k9-SoR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="centerX" secondItem="nq9-vb-LS2" secondAttribute="centerX" id="AzH-1p-96q"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="top" secondItem="nq9-vb-LS2" secondAttribute="top" constant="195" id="G50-1t-896"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="trailing" secondItem="cvF-sq-imU" secondAttribute="trailing" id="Lz5-oE-Z6O"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="leading" secondItem="3un-k3-Qfy" secondAttribute="leading" id="XdP-cS-u5S"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="trailing" secondItem="3un-k3-Qfy" secondAttribute="trailing" id="ZBa-d1-gcG"/>
+                            <constraint firstItem="3un-k3-Qfy" firstAttribute="top" secondItem="eP3-tA-Pj7" secondAttribute="bottom" constant="52" id="eWF-ht-knk"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="top" secondItem="cvF-sq-imU" secondAttribute="bottom" constant="51" id="q12-5G-Wam"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="leading" secondItem="MZ1-k9-SoR" secondAttribute="leading" id="sQf-vv-hA4"/>
+                            <constraint firstItem="eP3-tA-Pj7" firstAttribute="leading" secondItem="cvF-sq-imU" secondAttribute="leading" id="xKR-PZ-pTj"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="JRa-U4-uis"/>
                     <connections>
+                        <outlet property="ContinueBtn" destination="QYV-Kn-6Le" id="OCv-pt-npN"/>
+                        <outlet property="FalseBtn" destination="Mdh-QC-bAf" id="xmG-lG-GxK"/>
+                        <outlet property="TrueBtn" destination="mOb-gV-X35" id="fr5-nO-Igj"/>
                         <outlet property="image" destination="eP3-tA-Pj7" id="F0N-RA-vg9"/>
                         <outlet property="responseLabel" destination="3un-k3-Qfy" id="WQf-5a-334"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="njY-mD-iuw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2357" y="-388"/>
+            <point key="canvasLocation" x="2356.521739130435" y="-388.39285714285711"/>
         </scene>
         <!--QuizOneTVC-->
         <scene sceneID="GvS-fg-Waq">

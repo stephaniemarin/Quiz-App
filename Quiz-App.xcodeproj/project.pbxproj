@@ -34,6 +34,9 @@
 		9030E0CC27E367790026ED31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030E0CB27E367790026ED31 /* Main.storyboard */; };
 		9030E0D027E369E60026ED31 /* WelcomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */; };
 		9030E0D127E369E60026ED31 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */; };
+		D032B45527E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
+		D032B45627E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
+		D032B45727E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
 		D08ED6E727E377AD006453C6 /* IOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D08ED6E627E37783006453C6 /* IOS.sqlite */; };
 		D08ED6E827E377AD006453C6 /* IOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D08ED6E627E37783006453C6 /* IOS.sqlite */; };
 		D08ED6E927E377AE006453C6 /* IOS.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = D08ED6E627E37783006453C6 /* IOS.sqlite */; };
@@ -98,6 +101,7 @@
 		9030E0CB27E367790026ED31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewController.swift; sourceTree = "<group>"; };
 		9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureTrueFalseDB.db; sourceTree = "<group>"; };
 		D08ED6E627E37783006453C6 /* IOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IOS.sqlite; sourceTree = "<group>"; };
 		D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTwoVC.swift; sourceTree = "<group>"; };
 		D08ED70227E37B20006453C6 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
@@ -157,6 +161,7 @@
 				9030E0C927E3643D0026ED31 /* Info.plist */,
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
 				D08ED6E627E37783006453C6 /* IOS.sqlite */,
+				D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */,
 				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
 				9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */,
 				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
@@ -361,6 +366,7 @@
 				D08ED6E727E377AD006453C6 /* IOS.sqlite in Resources */,
 				9030E06A27E2A4B30026ED31 /* Assets.xcassets in Resources */,
 				9030E0CC27E367790026ED31 /* Main.storyboard in Resources */,
+				D032B45527E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D032B45627E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */,
 				D08ED6E827E377AD006453C6 /* IOS.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -376,6 +383,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D032B45727E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */,
 				D08ED6E927E377AE006453C6 /* IOS.sqlite in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
