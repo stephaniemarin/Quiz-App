@@ -10,8 +10,9 @@ import UIKit
 
 class WelcomeCollectionViewController: UICollectionViewController{
     
-    var imageData = ["swift", "java", "python"]
+    var imageData = ["einstain", "swift", "java", "python"]
     var TextData = ["Login","Pay","Feedback","Swift Language", "Programming","IOS"]
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,7 +55,7 @@ class WelcomeCollectionViewController: UICollectionViewController{
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 3
+        return 7
     }
 
 
@@ -69,6 +70,15 @@ class WelcomeCollectionViewController: UICollectionViewController{
         let welCell = collectionView.dequeueReusableCell(withReuseIdentifier: "welCell", for: indexPath) as! WelcomeCollectionViewCell
         let quizCell = collectionView.dequeueReusableCell(withReuseIdentifier: "quizCell", for: indexPath) as! WelcomeCollectionViewCell
 
+        let quiz2Cell = collectionView.dequeueReusableCell(withReuseIdentifier: "quiz2Cell", for: indexPath)
+       
+        let createMultQuiz = collectionView.dequeueReusableCell(withReuseIdentifier: "createMultQuiz", for: indexPath)
+        
+        let payAndFeedback = collectionView.dequeueReusableCell(withReuseIdentifier: "payAndFeedback", for: indexPath)
+        let sampleQuiz = collectionView.dequeueReusableCell(withReuseIdentifier: "sampleQuiz", for: indexPath)
+        
+        
+        
         switch indexPath.section{
         case 0:
            // welCell1.swiftImg.image = UIImage(named: imageData[indexPath.row])
@@ -77,14 +87,41 @@ class WelcomeCollectionViewController: UICollectionViewController{
             return loginCell
         case 1:
             //welCell2.javaImg.image = UIImage(named: imageData[indexPath.row])
-            welCell.welcometx
+            welCell.proglang.image = UIImage(named: imageData[indexPath.row])
             return welCell
         case 2:
-            quizCell.quizbtn
+//            quizCell.swiftImg.image = UIImage(named: imageData[indexPath.row])
             return quizCell
+        case 3:
+            return quiz2Cell
+        case 4:
+            return createMultQuiz
+        case 5:
+            return payAndFeedback
+        case 6:
+            return sampleQuiz
         default:
             return loginCell
         }
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+//        switch indexPath.section {
+//        case 0:
+//            performSegue(withIdentifier: "showCreate", sender: nil)
+//        case 1:
+//            print("You are in welcome")
+//        case 2:
+//            performSegue(withIdentifier: "showQuiz1", sender: nil)
+//        case 3:
+//        case 4:
+//        case 5:
+//        case 6:
+//            if
+//        default:
+//            print("wrong choice")
+//    }
+        
     }
     
     private func generateLayout() ->UICollectionViewLayout{
@@ -104,57 +141,5 @@ class WelcomeCollectionViewController: UICollectionViewController{
         return layout
         //after this tell viewdidload() to use the new layout
     }
-    
-    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        switch indexPath.section {
-        case 0:
-//            let sb1 : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let tcv = sb1.instantiateViewController(withIdentifier: "CreateAccount") as! CreateAccountVC
-//            present(tcv, animated: true, completion: nil)
-//
-            performSegue(withIdentifier: "showCreate", sender: nil)
-        case 1:
-            print("You are in welcome")
-        case 2:
-//            let sb1 : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-//            let tcv = sb1.instantiateViewController(withIdentifier: "QuizOneTVC") as! CreateAccountVC
-//            present(tcv, animated: true, completion: nil)
-            performSegue(withIdentifier: "showQuiz1", sender: nil)
-        default:
-            print("wrong choice")
-    }
-        
-    }
-
-    // MARK: UICollectionViewDelegate
-
-    /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, canPerformAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) -> Bool {
-        return false
-    }
-
-    override func collectionView(_ collectionView: UICollectionView, performAction action: Selector, forItemAt indexPath: IndexPath, withSender sender: Any?) {
-    
-    }
-    */
 
 }
