@@ -20,4 +20,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var pythonImg: UIImageView!
     @IBOutlet weak var einstainImg: UIImageView!
     @IBOutlet weak var proglang: UIImageView!
+    
+    @IBOutlet weak var fbLogin: UIButton!
+    
 }

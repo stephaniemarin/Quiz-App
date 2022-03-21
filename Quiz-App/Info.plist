@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string></string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string></string>
 	<key></key>
 	<string></string>
 	<key>UIApplicationSceneManifest</key>
@@ -23,5 +27,25 @@
 			</array>
 		</dict>
 	</dict>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb383160303337973</string>
+			</array>
+		</dict>
+	</array>
+	<key>FacebookAppID</key>
+	<string>383160303337973</string>
+	<key>FacebookClientToken</key>
+	<string>3ebdd591ed729121a457410fc3a4216d</string>
+	<key>FacebookDisplayName</key>
+	<string>Quiz-App</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+	</array>
 </dict>
 </plist>

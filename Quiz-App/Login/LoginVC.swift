@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FacebookLogin
 
 struct CurrentUser {
    var  name : String
@@ -22,6 +23,9 @@ class LoginVC: UIViewController {
     let PAYCASH = CheckBox(frame:CGRect(x:100,y:300, width: 40,height:40))
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+     
+        
         ContinuedSignInCheckBox.startHidden()
        PAYCASH.startHidden()
         let defaults = UserDefaults.standard
@@ -60,10 +64,7 @@ class LoginVC: UIViewController {
             
             
             view.addSubview(ContinuedSignInCheckBox)
-          
-            
-            
-            
+   
             
             password.text = getKeyChainPassword()
         
@@ -71,6 +72,9 @@ class LoginVC: UIViewController {
             password.isHidden.toggle()
         
         // Do any additional setup after loading the view.
+            
+            
+            
     }
     }
     
@@ -109,11 +113,7 @@ class LoginVC: UIViewController {
         
        
             //
-        
-        
-        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let goToLogin = storyBoard.instantiateViewController(withIdentifier: "CollectionCenter") as! CollectionVC
-        self.present(goToLogin,animated: true,completion: nil)
+
          
         
     

@@ -6,6 +6,7 @@
 // welcome collection view controller
 
 import UIKit
+import FacebookLogin
 
 
 class WelcomeCollectionViewController: UICollectionViewController{
@@ -25,11 +26,11 @@ class WelcomeCollectionViewController: UICollectionViewController{
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         func generateLayout() -> UICollectionViewLayout{
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(1.0))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.0))
             
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             
-            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(140.0))
+            let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(150.0))
             
             let group = NSCollectionLayoutGroup.vertical(layoutSize: groupSize, subitem: item, count: 1)
             
@@ -81,7 +82,15 @@ class WelcomeCollectionViewController: UICollectionViewController{
         
         switch indexPath.section{
         case 0:
-           // welCell1.swiftImg.image = UIImage(named: imageData[indexPath.row])
+            //facebook login
+            let loginButton = FBLoginButton()
+            loginButton.center = CGPoint(x: 110, y: 110)
+            view.addSubview(loginButton)
+            if let token = AccessToken.current,
+                    !token.isExpired {
+                
+            }
+            
             loginCell.loginbtn
             
             return loginCell
@@ -126,14 +135,14 @@ class WelcomeCollectionViewController: UICollectionViewController{
     
     private func generateLayout() ->UICollectionViewLayout{
        //item size
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(3.0), heightDimension: .fractionalHeight(3.0))
+        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(3.0), heightDimension: .fractionalHeight(2.0))
         
         // declaring item
         let item = NSCollectionLayoutItem(layoutSize: itemSize)
         //group size
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .absolute(50.0))
+        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.0), heightDimension: .absolute(30.0))
         //declaring group horizontal
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 1)
+        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 7)
         //section
         let section = NSCollectionLayoutSection(group: group)
         let layout = UICollectionViewCompositionalLayout(section: section)

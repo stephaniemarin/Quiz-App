@@ -34,6 +34,9 @@
 		9030E0CC27E367790026ED31 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9030E0CB27E367790026ED31 /* Main.storyboard */; };
 		9030E0D027E369E60026ED31 /* WelcomeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */; };
 		9030E0D127E369E60026ED31 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */; };
+		909BFC8527E8D2A200D85D8F /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8427E8D2A200D85D8F /* FacebookCore */; };
+		909BFC8727E8D2A200D85D8F /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8627E8D2A200D85D8F /* FacebookLogin */; };
+		909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFC8827E8EB3400D85D8F /* Extensions.swift */; };
 		D032B45527E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
 		D032B45627E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
 		D032B45727E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
@@ -101,6 +104,7 @@
 		9030E0CB27E367790026ED31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewController.swift; sourceTree = "<group>"; };
 		9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
+		909BFC8827E8EB3400D85D8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureTrueFalseDB.db; sourceTree = "<group>"; };
 		D08ED6E627E37783006453C6 /* IOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IOS.sqlite; sourceTree = "<group>"; };
 		D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTwoVC.swift; sourceTree = "<group>"; };
@@ -113,6 +117,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				909BFC8727E8D2A200D85D8F /* FacebookLogin in Frameworks */,
+				909BFC8527E8D2A200D85D8F /* FacebookCore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -159,15 +165,16 @@
 			children = (
 				9030E0C927E3643D0026ED31 /* Info.plist */,
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
+				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
 				D08ED6E627E37783006453C6 /* IOS.sqlite */,
 				D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */,
-				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
 				9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */,
 				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
 				9030E0B227E34F9F0026ED31 /* Login */,
 				9030E09127E2BAC40026ED31 /* ViewControllers */,
 				9030E09027E2B8D00026ED31 /* storyboard */,
 				9030E06927E2A4B30026ED31 /* Assets.xcassets */,
+				909BFC8827E8EB3400D85D8F /* Extensions.swift */,
 			);
 			path = "Quiz-App";
 			sourceTree = "<group>";
@@ -272,6 +279,10 @@
 			dependencies = (
 			);
 			name = "Quiz-App";
+			packageProductDependencies = (
+				909BFC8427E8D2A200D85D8F /* FacebookCore */,
+				909BFC8627E8D2A200D85D8F /* FacebookLogin */,
+			);
 			productName = "Quiz-App";
 			productReference = 9030E05D27E2A4B20026ED31 /* Quiz-App.app */;
 			productType = "com.apple.product-type.application";
@@ -344,6 +355,9 @@
 				Base,
 			);
 			mainGroup = 9030E05427E2A4B20026ED31;
+			packageReferences = (
+				909BFC8327E8D2A200D85D8F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */,
+			);
 			productRefGroup = 9030E05E27E2A4B20026ED31 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -413,6 +427,7 @@
 				9030E0AD27E34F660026ED31 /* QuizOneDB.swift in Sources */,
 				9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */,
 				D08ED70E27E37F51006453C6 /* QuizOneTVC.swift in Sources */,
+				909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */,
 				9030E09927E2C2400026ED31 /* Welcome1CollectionViewController.swift in Sources */,
 				D08ED6EF27E379EC006453C6 /* QuizTwoVC.swift in Sources */,
 				9030E0D027E369E60026ED31 /* WelcomeCollectionViewController.swift in Sources */,
@@ -752,6 +767,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		909BFC8327E8D2A200D85D8F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/facebook/facebook-ios-sdk";
+			requirement = {
+				branch = main;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		909BFC8427E8D2A200D85D8F /* FacebookCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 909BFC8327E8D2A200D85D8F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookCore;
+		};
+		909BFC8627E8D2A200D85D8F /* FacebookLogin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 909BFC8327E8D2A200D85D8F /* XCRemoteSwiftPackageReference "facebook-ios-sdk" */;
+			productName = FacebookLogin;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 9030E05527E2A4B20026ED31 /* Project object */;
 }

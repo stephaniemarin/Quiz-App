@@ -70,8 +70,7 @@ class CreateAccountVC: UIViewController {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         let goToLogin = storyBoard.instantiateViewController(withIdentifier: "LoginPage") as! LoginVC
         self.present(goToLogin,animated: true,completion: nil)
-         
-        
+   
     }
   
 

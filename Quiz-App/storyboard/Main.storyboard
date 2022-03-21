@@ -273,27 +273,36 @@
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="topRight" reuseIdentifier="loginCell" id="0Pz-tw-C2V" customClass="WelcomeCollectionViewCell" customModule="Quiz_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="topRight" insetsLayoutMarginsFromSafeArea="NO" id="KpO-qB-tYX">
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="sNf-oc-DV1">
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-L1-5Pp">
+                                            <rect key="frame" x="266" y="46" width="130" height="36"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
+                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1i-my-oB7">
-                                            <rect key="frame" x="300" y="8" width="110" height="31"/>
+                                            <rect key="frame" x="272" y="12" width="119" height="33"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title="Log In"/>
+                                            <connections>
+                                                <segue destination="MZF-i9-57I" kind="show" id="cJs-l0-Rvk"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="0.63614636660000001" green="0.69854778049999999" blue="0.68569636339999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="customSize" width="399" height="128"/>
                                 <connections>
+                                    <outlet property="fbLogin" destination="RfS-L1-5Pp" id="Wp6-nR-7kB"/>
                                     <outlet property="loginbtn" destination="L1i-my-oB7" id="Y2q-m6-irW"/>
-                                    <segue destination="MZF-i9-57I" kind="show" id="4BB-t0-flp"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="welCell" id="3fO-sJ-2D4" customClass="WelcomeCollectionViewCell" customModule="Quiz_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="161.5" width="399" height="128"/>
+                                <rect key="frame" x="0.0" y="151.5" width="399" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="5in-P9-ldC">
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
@@ -319,10 +328,10 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="sampleQuiz" id="DaA-q0-gwx">
-                                <rect key="frame" x="0.0" y="323" width="399" height="128"/>
+                                <rect key="frame" x="0.0" y="303" width="399" height="75"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="jpW-O4-0ab">
-                                    <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="399" height="75"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sample Quiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xrI-xo-G3n">
@@ -335,13 +344,13 @@
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.70726759449999999" blue="0.55139243199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="399" height="128"/>
+                                <size key="customSize" width="399" height="75"/>
                                 <connections>
                                     <segue destination="Lhj-zp-AFn" kind="show" id="rld-vi-ske"/>
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="quizCell" id="1Lr-hu-Fcg" customClass="WelcomeCollectionViewCell" customModule="Quiz_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="484.5" width="399" height="128"/>
+                                <rect key="frame" x="0.0" y="401" width="399" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="j8P-qG-YTD">
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
@@ -360,10 +369,10 @@
                                 </connections>
                             </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="quiz2Cell" id="fCy-AX-j5q" customClass="WelcomeCollectionViewCell" customModule="Quiz_App" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="646" width="399" height="128"/>
+                                <rect key="frame" x="0.0" y="552.5" width="399" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4KG-Ae-xcw">
-                                    <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="399" height="70"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="True / False Questions" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jmu-DA-cgE">
@@ -376,35 +385,13 @@
                                     </subviews>
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.70726759449999999" blue="0.55139243199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="399" height="128"/>
+                                <size key="customSize" width="399" height="70"/>
                                 <connections>
                                     <segue destination="zVA-2n-UuY" kind="show" id="qp9-c7-wFX"/>
                                 </connections>
                             </collectionViewCell>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="createMultQuiz" id="Ajx-dU-dOl">
-                                <rect key="frame" x="409" y="0.0" width="399" height="128"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cKK-9w-Cbw">
-                                    <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-65-xnD">
-                                            <rect key="frame" x="57" y="14" width="129" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                </collectionViewCellContentView>
-                                <color key="backgroundColor" red="1" green="0.70726759449999999" blue="0.55139243199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <size key="customSize" width="399" height="128"/>
-                                <connections>
-                                    <segue destination="dCE-zF-j80" kind="show" id="Iq1-yw-IQq"/>
-                                </connections>
-                            </collectionViewCell>
                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="payAndFeedback" id="eKW-4d-bjw">
-                                <rect key="frame" x="409" y="161.5" width="399" height="128"/>
+                                <rect key="frame" x="0.0" y="646" width="399" height="128"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="z7C-3V-32Z">
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
@@ -441,6 +428,28 @@
                                 </collectionViewCellContentView>
                                 <color key="backgroundColor" red="1" green="0.70726759449999999" blue="0.55139243199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <size key="customSize" width="399" height="128"/>
+                            </collectionViewCell>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="createMultQuiz" id="Ajx-dU-dOl">
+                                <rect key="frame" x="409" y="0.0" width="399" height="128"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="cKK-9w-Cbw">
+                                    <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Create New Quiz" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Afj-65-xnD">
+                                            <rect key="frame" x="57" y="14" width="129" height="21"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" red="1" green="0.70726759449999999" blue="0.55139243199999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="customSize" width="399" height="128"/>
+                                <connections>
+                                    <segue destination="dCE-zF-j80" kind="show" id="Iq1-yw-IQq"/>
+                                </connections>
                             </collectionViewCell>
                         </cells>
                         <connections>
@@ -750,13 +759,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tA-Pj7">
-                                <rect key="frame" x="5" y="202" width="404" height="221"/>
+                                <rect key="frame" x="5" y="202" width="384" height="221"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="jIz-Ck-Lyg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-sq-imU">
-                                <rect key="frame" x="64" y="143" width="286" height="44"/>
+                                <rect key="frame" x="64" y="143" width="266" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="nAf-6e-gs0"/>
                                     <constraint firstAttribute="width" constant="287" id="pEm-eO-cqK"/>
@@ -774,7 +783,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-QC-bAf">
-                                <rect key="frame" x="228" y="623" width="124" height="64"/>
+                                <rect key="frame" x="208" y="623" width="124" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="QhM-1c-2TI"/>
                                     <constraint firstAttribute="width" constant="124" id="WzC-Xt-lgA"/>
@@ -845,7 +854,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" cornerStyle="capsule">
                                     <backgroundConfiguration key="background" strokeWidth="7">
-                                        <color key="backgroundColor" red="0.8027746456" green="0.47679802609999999" blue="0.095615073829999994" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <color key="backgroundColor" red="0.80392156862745101" green="0.47843137254901957" blue="0.094117647058823528" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <color key="strokeColor" red="0.96007168170103097" green="0.80070061077240318" blue="0.067298059432208665" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
                                     <attributedString key="attributedTitle">
@@ -865,7 +874,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-mP-rri">
-                                <rect key="frame" x="271" y="45" width="143" height="36"/>
+                                <rect key="frame" x="251" y="45" width="143" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="6nz-ne-059"/>
                                     <constraint firstAttribute="height" constant="36" id="Z3R-mR-Laz"/>
