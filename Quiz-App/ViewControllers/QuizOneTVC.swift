@@ -19,7 +19,11 @@ struct ReOrder {
 
 
 class QuizOneTVC: UITableViewController {
- 
+    var runCount:Int=0
+    var LABEL:UILabel?
+    var QuestionsCorrect:Int = 0
+    var QuestionsAnswered:Int = 0
+    var runString:String = " "
     var db : OpaquePointer?
     var quizOneDB = [QuizOneDB]()
     @IBOutlet var tableV: UITableView!
@@ -114,9 +118,13 @@ class QuizOneTVC: UITableViewController {
            
            
            
+           let timer = Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(fireTimer),userInfo:nil,repeats:true)
+           //fireTimer()
+           print("Welll I printed here")
            
-           
-           
+           LABEL = UILabel(frame: CGRect(x:0,y:0,width:400,height:60))
+           LABEL!.center = CGPoint(x:214,y:600)
+           self.view.addSubview(LABEL!)
        }
        else {
            print("oh no what is wrong dearie")
@@ -141,6 +149,30 @@ class QuizOneTVC: UITableViewController {
        // self.navigationItem.rightBarButtonItem = self.editButtonItem
    }
 
+    func minutesSeconds(_ seconds: Int) -> String {
+        
+        return ("(30 Mins Max)  \(seconds/60) min : \(seconds%60) sec            Score:\(QuestionsCorrect)/\(QuestionsAnswered)")
+    }
+    
+    
+    
+    @objc func fireTimer() {
+        print ("Firing")
+        runCount+=1
+        runString=String(minutesSeconds(runCount))
+        print(runString)
+        self.tableV.headerView(forSection: 0)?.reloadInputViews()
+       
+        //_=navigationController?.popToRooViewController(animated: true)
+        //self.dismiss(animated:true,completion:nil)
+        
+        
+        
+        LABEL!.text = runString
+        self.view.addSubview(LABEL!)
+    }
+    
+    
    // MARK: - Table view data source
 
    override func numberOfSections(in tableView: UITableView) -> Int {
@@ -160,7 +192,7 @@ class QuizOneTVC: UITableViewController {
        // var holdcCell = []
        tableView.allowsSelection = true
        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
-       cell.backgroundColor = .lightGray
+       cell.backgroundColor = .yellow
         cell.textLabel?.text = AllQuiz[whichQuestion][indexPath.row] //quiz[whichQuestion].answers?[indexPath.row]
 
        
@@ -171,12 +203,14 @@ class QuizOneTVC: UITableViewController {
    }
    override func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
        let view = UIView(frame: CGRect(x:0, y:0 , width : tableView.frame.width,height: 130))
-       view.backgroundColor = .gray
+       view.backgroundColor = .orange
        
        let lbl = UILabel(frame: CGRect(x:15, y:10, width: view.frame.width-15,height: 130))
        lbl.text = quizOneDB[whichQuestion].question
        view.addSubview(lbl)
-       
+     //  let lbl2 = UILabel(frame:CGRect(x:15,y:0,width:view.frame.width,height:30))
+    //   lbl2.text = runString
+     //  view.addSubview(lbl2)
        return view
    
    }
@@ -190,11 +224,13 @@ class QuizOneTVC: UITableViewController {
        
        
        
-       
+       QuestionsAnswered+=1
        tableView.deselectRow(at: indexPath, animated:true)
        if indexPath.row == answerKey[whichQuestion] {
            tableView.cellForRow(at: indexPath)?.backgroundColor = .green
+           QuestionsCorrect+=1
            tableView.allowsSelection = false
+           
            self.whichQuestion += 1
            if self.whichQuestion == TotalQuestions {
                self.whichQuestion = 0

@@ -105,7 +105,6 @@
 		D08ED6E627E37783006453C6 /* IOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IOS.sqlite; sourceTree = "<group>"; };
 		D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTwoVC.swift; sourceTree = "<group>"; };
 		D08ED70227E37B20006453C6 /* FeedbackVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackVC.swift; sourceTree = "<group>"; };
-		D08ED70C27E37F4D006453C6 /* QuizOneTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOneTVC.swift; sourceTree = "<group>"; };
 		D08ED70D27E37F51006453C6 /* QuizOneTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizOneTVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -231,7 +230,6 @@
 			isa = PBXGroup;
 			children = (
 				D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */,
-				D08ED70C27E37F4D006453C6 /* QuizOneTVC.swift */,
 				9030E0AC27E34F660026ED31 /* QuizOneDB.swift */,
 				9030E0C027E35ADF0026ED31 /* TableVC.swift */,
 			);

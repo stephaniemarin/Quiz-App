@@ -17,9 +17,26 @@ struct QDB {
 
 
 class QuizTwoVC: UIViewController {
+    
+    var animator:UIDynamicAnimator!
+    var gravity:UIGravityBehavior!
+    var collision:UICollisionBehavior!
+    var bouncy:UIDynamicItemBehavior!
+   
+    
+    var ScoringCGRect :CGRect!
+    var MainHeadlineCGRect :CGRect!
+    var TrueBtnCGRect: CGRect!
+    var FalseBtnCGRect:CGRect!
+    
+    var gravityForFalse : Bool = false
+    
+    @IBOutlet weak var MainHeadline: UILabel!
     var quizTwoQuestions = [QDB]()
+    var Prodding = [String]()
     var db : OpaquePointer?
     var answers = [Bool]()
+    @IBOutlet weak var Scoring: UILabel!
     var numberQuestions = 27
     var numCorrect = 0
     var attemptedQuestions = 0
@@ -27,14 +44,39 @@ class QuizTwoVC: UIViewController {
     @IBOutlet weak var image: UIImageView!
     @IBOutlet weak var responseLabel: UILabel!
     
+    @IBOutlet weak var respondView: UITextView!
     @IBOutlet weak var TrueBtn: UIButton!
     @IBOutlet weak var FalseBtn: UIButton!
     @IBOutlet weak var ContinueBtn: UIButton!
    
 
     override func viewDidLoad() {
+        
        super.viewDidLoad()
         
+        ScoringCGRect = Scoring.frame
+        
+        MainHeadlineCGRect = MainHeadline.frame
+        TrueBtnCGRect = TrueBtn.frame
+        FalseBtnCGRect = FalseBtn.frame
+        
+        
+        
+        
+        
+       // [Scoring,MainHeadline,TrueBtn,FalseBtn]
+        
+        
+        
+        
+        
+        
+        Prodding = ["What do you think?", "Well? Is it good code or not?", "Choose one:...","Think it through first.", "Maybe this one is too easy...","Don't take all day!"," Choose True or False!", "These aren't trick questions.","The timer is going..", "Oh! An easy one.","Those are your choices below.", "Here are your choices","Go on be quick about it.","Read Carefully and choose your path."]
+        Prodding.shuffle()
+        respondView.text=Prodding[0]
+        respondView.isEditable = false
+        respondView.isSelectable = false
+        ContinueBtn.isHidden = true
         image.image = UIImage(named:"test1")
         
        if let fileURL = Bundle.main.url(forResource: "PictureTrueFalseDB", withExtension: "db") {
@@ -78,8 +120,8 @@ class QuizTwoVC: UIViewController {
                
            }
               
-               for _ in 0...16 { correct.append(true)}
-               for _ in 17...26 {correct.append(false)}
+               for _ in 0...13 { correct.append(true)}
+               for _ in 14...26 {correct.append(false)}
                var order : [Int] = []
                for i in 0...26 { order.append(i)}
                order.shuffle()
@@ -110,43 +152,72 @@ class QuizTwoVC: UIViewController {
         if veracity {//veracity ==true
             
             if idQ == true {
+                gravityForFalse = true
                 numCorrect += 1
                
-                responseLabel.text="Correct! " + quizTwoQuestions[currentQuestion].comment
-                TrueBtn.backgroundColor = .green
+                respondView.text="Correct! " + quizTwoQuestions[currentQuestion].comment
+                view.backgroundColor = .green
             }
             else {//wrong answer chose false
-                responseLabel.text="InCorrect! " + quizTwoQuestions[currentQuestion].comment
-                FalseBtn.backgroundColor = .red
+                gravityForFalse = false
+                respondView.text="InCorrect! " + quizTwoQuestions[currentQuestion].comment
+                view.backgroundColor = .red
+                putAnimationHere()
             }
         }
         else
         {//veracity ==false
             if idQ == false {
+                gravityForFalse = true
                 numCorrect += 1
                 
-                responseLabel.text="Correct! " + quizTwoQuestions[currentQuestion].comment
-                FalseBtn.backgroundColor = .green
+                respondView.text="Correct! " + quizTwoQuestions[currentQuestion].comment
+                view.backgroundColor = .green
 
             }
             else {
-                responseLabel.text="InCorrect! " + quizTwoQuestions[currentQuestion].comment
-                TrueBtn.backgroundColor = .red
+                gravityForFalse = false
+                respondView.text="InCorrect! " + quizTwoQuestions[currentQuestion].comment
+                view.backgroundColor = .red
+                putAnimationHere()
             }
            
         }
  
         }
        
+    func putAnimationHere() {
+        
+        animator = UIDynamicAnimator(referenceView:self.view)
+         
+     gravity = UIGravityBehavior(items:  [Scoring,MainHeadline,TrueBtn,FalseBtn])
+       //  motion = CMMotionManager()
+        gravity.setAngle(Double.pi/2, magnitude: 0.3)
+         bouncy = UIDynamicItemBehavior(items:  [Scoring,MainHeadline,TrueBtn,FalseBtn])
+         bouncy.elasticity = 0.8
+         bouncy.addAngularVelocity(Double.random(in:-30...30), for: Scoring)
+        bouncy.addAngularVelocity(Double.random(in:-30...30), for: MainHeadline)
+        bouncy.addAngularVelocity(Double.random(in: -12...12), for: TrueBtn)
+        bouncy.addAngularVelocity(Double.random(in:-12...12), for: FalseBtn)
+        
+         collision = UICollisionBehavior(items:  [Scoring,MainHeadline,TrueBtn,FalseBtn])
+         collision.addBoundary(withIdentifier: "borders" as NSCopying, for: UIBezierPath(rect:self.view.frame))
+         animator.addBehavior(bouncy)
+         animator.addBehavior(collision)
+         animator.addBehavior(gravity)
+        
+       
+    }
     
     
-   
     
     @IBAction func clickedTrue(_ sender: Any) {
        
         TrueBtn.isEnabled = false
         FalseBtn.isEnabled = false
         ContinueBtn.isEnabled = true
+        ContinueBtn.isHidden = false
+        FalseBtn.isHidden = true
         checkAnswer(idQ: true)
         
     }
@@ -155,8 +226,11 @@ class QuizTwoVC: UIViewController {
        
         TrueBtn.isEnabled = false
         FalseBtn.isEnabled = false
+        TrueBtn.isHidden = true
         ContinueBtn.isEnabled = true
+        ContinueBtn.isHidden = false
         checkAnswer(idQ: false)
+       
     }
     
 
@@ -164,13 +238,33 @@ class QuizTwoVC: UIViewController {
         TrueBtn.isEnabled = true
         FalseBtn.isEnabled = true
         ContinueBtn.isEnabled = false
-        TrueBtn.backgroundColor = .brown
-        FalseBtn.backgroundColor = .brown
-        responseLabel.text = ""
+        ContinueBtn.isHidden = true
+        TrueBtn.isHidden = false
+        FalseBtn.isHidden = false
+        Prodding.shuffle()
+        attemptedQuestions += 1
+        Scoring.text = "Score: \(numCorrect) : \(attemptedQuestions)"
+        view.backgroundColor = .white
+      //  FalseBtn.backgroundColor = .brown
+        respondView.text = Prodding[0]
         currentQuestion += 1
-        if currentQuestion == 27 {return}//to do functionality
+        if currentQuestion == 27 {currentQuestion=0}//to do functionality
         let nAmE = quizTwoQuestions[currentQuestion].question
         image.image = UIImage(named: nAmE)
+        
+        if !gravityForFalse {
+        animator.removeAllBehaviors()
+        Scoring.frame = ScoringCGRect
+        Scoring.transform = CGAffineTransform(rotationAngle: 0.0)
+            Scoring.transform = CGAffineTransform(translationX: 0.0, y: 0.0)
+        MainHeadline.frame = MainHeadlineCGRect
+        MainHeadline.transform = CGAffineTransform(rotationAngle:0.0)
+        TrueBtn.frame = TrueBtnCGRect
+        TrueBtn.transform = CGAffineTransform(rotationAngle: 0.0)
+        FalseBtn.frame = FalseBtnCGRect
+        FalseBtn.transform = CGAffineTransform(rotationAngle: 0.0)
+        }
+     //   [Scoring,MainHeadline,TrueBtn,FalseBtn]
     }
     
     
