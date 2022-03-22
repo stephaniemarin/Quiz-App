@@ -37,6 +37,9 @@
 		909BFC8527E8D2A200D85D8F /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8427E8D2A200D85D8F /* FacebookCore */; };
 		909BFC8727E8D2A200D85D8F /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8627E8D2A200D85D8F /* FacebookLogin */; };
 		909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFC8827E8EB3400D85D8F /* Extensions.swift */; };
+		909BFCA627E9CC6C00D85D8F /* quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFCA527E9CC6C00D85D8F /* quiz3.swift */; };
+		909BFCA827E9D5B800D85D8F /* Matchquiz.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFCA727E9D5B800D85D8F /* Matchquiz.swift */; };
+		909BFCAA27E9D64800D85D8F /* MatchQuizVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFCA927E9D64800D85D8F /* MatchQuizVC.swift */; };
 		D032B45527E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
 		D032B45627E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
 		D032B45727E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
@@ -105,6 +108,9 @@
 		9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewController.swift; sourceTree = "<group>"; };
 		9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
 		909BFC8827E8EB3400D85D8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		909BFCA527E9CC6C00D85D8F /* quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz3.swift; sourceTree = "<group>"; };
+		909BFCA727E9D5B800D85D8F /* Matchquiz.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Matchquiz.swift; sourceTree = "<group>"; };
+		909BFCA927E9D64800D85D8F /* MatchQuizVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchQuizVC.swift; sourceTree = "<group>"; };
 		D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureTrueFalseDB.db; sourceTree = "<group>"; };
 		D08ED6E627E37783006453C6 /* IOS.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = IOS.sqlite; sourceTree = "<group>"; };
 		D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizTwoVC.swift; sourceTree = "<group>"; };
@@ -163,6 +169,7 @@
 		9030E05F27E2A4B20026ED31 /* Quiz-App */ = {
 			isa = PBXGroup;
 			children = (
+				909BFCA427E9CC4A00D85D8F /* Quiz3 */,
 				9030E0C927E3643D0026ED31 /* Info.plist */,
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
 				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
@@ -261,6 +268,16 @@
 				9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */,
 			);
 			path = oldNonworking;
+			sourceTree = "<group>";
+		};
+		909BFCA427E9CC4A00D85D8F /* Quiz3 */ = {
+			isa = PBXGroup;
+			children = (
+				909BFCA527E9CC6C00D85D8F /* quiz3.swift */,
+				909BFCA727E9D5B800D85D8F /* Matchquiz.swift */,
+				909BFCA927E9D64800D85D8F /* MatchQuizVC.swift */,
+			);
+			path = Quiz3;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +427,7 @@
 				9030E09327E2BAF70026ED31 /* LogInViewController.swift in Sources */,
 				9030E0BA27E34F9F0026ED31 /* LoginVC.swift in Sources */,
 				9030E09D27E34D280026ED31 /* AdminDataBaseVC.swift in Sources */,
+				909BFCAA27E9D64800D85D8F /* MatchQuizVC.swift in Sources */,
 				9030E0B127E34F7B0026ED31 /* ViewCell.swift in Sources */,
 				D08ED70327E37B20006453C6 /* FeedbackVC.swift in Sources */,
 				9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */,
@@ -417,6 +435,7 @@
 				9030E0D127E369E60026ED31 /* WelcomeCollectionViewCell.swift in Sources */,
 				9030E09F27E34E6C0026ED31 /* CollectionVC.swift in Sources */,
 				9030E0BE27E34F9F0026ED31 /* KeychainItemAccessibility.swift in Sources */,
+				909BFCA627E9CC6C00D85D8F /* quiz3.swift in Sources */,
 				9030E0BC27E34F9F0026ED31 /* CreateAccountVC.swift in Sources */,
 				9030E0AB27E34F3F0026ED31 /* PayVC.swift in Sources */,
 				9030E09B27E2C2EB0026ED31 /* WelcomeCV1Cell.swift in Sources */,
@@ -429,6 +448,7 @@
 				D08ED70E27E37F51006453C6 /* QuizOneTVC.swift in Sources */,
 				909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */,
 				9030E09927E2C2400026ED31 /* Welcome1CollectionViewController.swift in Sources */,
+				909BFCA827E9D5B800D85D8F /* Matchquiz.swift in Sources */,
 				D08ED6EF27E379EC006453C6 /* QuizTwoVC.swift in Sources */,
 				9030E0D027E369E60026ED31 /* WelcomeCollectionViewController.swift in Sources */,
 				9030E06327E2A4B20026ED31 /* SceneDelegate.swift in Sources */,

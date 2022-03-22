@@ -21,6 +21,7 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var einstainImg: UIImageView!
     @IBOutlet weak var proglang: UIImageView!
     
-    @IBOutlet weak var fbLogin: UIButton!
+    @IBOutlet weak var logOutbtn: UIButton!
+    
     
 }

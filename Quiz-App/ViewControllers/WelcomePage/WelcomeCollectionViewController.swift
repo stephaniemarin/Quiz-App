@@ -7,13 +7,15 @@
 
 import UIKit
 import FacebookLogin
+import SwiftUI
 
 
 class WelcomeCollectionViewController: UICollectionViewController{
     
     var imageData = ["einstain", "swift", "java", "python"]
     var TextData = ["Login","Pay","Feedback","Swift Language", "Programming","IOS"]
-    
+    var loginChecked = false
+    var signupChecked = true
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +28,7 @@ class WelcomeCollectionViewController: UICollectionViewController{
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         func generateLayout() -> UICollectionViewLayout{
-            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.0))
+            let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.97))
             
             let item = NSCollectionLayoutItem(layoutSize: itemSize)
             
@@ -84,14 +86,15 @@ class WelcomeCollectionViewController: UICollectionViewController{
         case 0:
             //facebook login
             let loginButton = FBLoginButton()
-            loginButton.center = CGPoint(x: 110, y: 110)
+            loginButton.center = CGPoint( x: 110, y: 110)
             view.addSubview(loginButton)
             if let token = AccessToken.current,
                     !token.isExpired {
                 
             }
             
-            loginCell.loginbtn
+            loginCell.loginbtn.layer.cornerRadius = 20
+            loginCell.logOutbtn.layer.cornerRadius = 20
             
             return loginCell
         case 1:
@@ -112,24 +115,13 @@ class WelcomeCollectionViewController: UICollectionViewController{
         default:
             return loginCell
         }
+        
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        switch indexPath.section {
-//        case 0:
-//            performSegue(withIdentifier: "showCreate", sender: nil)
-//        case 1:
-//            print("You are in welcome")
-//        case 2:
-//            performSegue(withIdentifier: "showQuiz1", sender: nil)
-//        case 3:
-//        case 4:
-//        case 5:
-//        case 6:
-//            if
-//        default:
-//            print("wrong choice")
-//    }
+        
+    
         
     }
     
@@ -150,5 +142,7 @@ class WelcomeCollectionViewController: UICollectionViewController{
         return layout
         //after this tell viewdidload() to use the new layout
     }
+    
+    
 
 }

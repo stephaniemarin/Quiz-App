@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X1e-0N-Dag">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EcH-BW-6LD">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -277,20 +277,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="399" height="128"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-L1-5Pp">
-                                            <rect key="frame" x="266" y="46" width="130" height="36"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Button"/>
-                                            <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
-                                        </button>
                                         <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L1i-my-oB7">
-                                            <rect key="frame" x="272" y="12" width="119" height="33"/>
+                                            <rect key="frame" x="285" y="12" width="106" height="26"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="person" catalog="system" title="Log In"/>
                                             <connections>
                                                 <segue destination="MZF-i9-57I" kind="show" id="cJs-l0-Rvk"/>
                                             </connections>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RfS-L1-5Pp" userLabel="Logoutbtn">
+                                            <rect key="frame" x="285" y="46" width="106" height="27"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                            <state key="normal" title="Button"/>
+                                            <buttonConfiguration key="configuration" style="plain" title="Log Out"/>
                                         </button>
                                     </subviews>
                                 </collectionViewCellContentView>
@@ -298,6 +300,7 @@
                                 <size key="customSize" width="399" height="128"/>
                                 <connections>
                                     <outlet property="fbLogin" destination="RfS-L1-5Pp" id="Wp6-nR-7kB"/>
+                                    <outlet property="logOutbtn" destination="RfS-L1-5Pp" id="e4R-28-PQr"/>
                                     <outlet property="loginbtn" destination="L1i-my-oB7" id="Y2q-m6-irW"/>
                                 </connections>
                             </collectionViewCell>
@@ -315,7 +318,7 @@
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="proglang" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-wL-UYr">
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ogz-wL-UYr">
                                             <rect key="frame" x="77" y="0.0" width="240" height="128"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         </imageView>
@@ -462,6 +465,39 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fHv-ZU-h4D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-649.27536231884062" y="399.77678571428572"/>
+        </scene>
+        <!--Hosting Controller-->
+        <scene sceneID="PoN-vz-B1z">
+            <objects>
+                <hostingController id="AOb-Jm-0e7" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1yt-Gg-VcU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="720" y="381"/>
+        </scene>
+        <!--MatchQuiz-->
+        <scene sceneID="Uiw-Xv-XJi">
+            <objects>
+                <viewController title="MatchQuiz" id="EcH-BW-6LD" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Vde-8h-Vg7">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MfA-KC-yTH" customClass="Match">
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="AOb-Jm-0e7" kind="embed" destinationCreationSelector="hostUI:" id="RA3-f9-hq4"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2pA-FW-h1a"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="PMk-KA-w1w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BpC-aX-60e" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1583" y="380"/>
         </scene>
         <!--Admin Data BaseVC-->
         <scene sceneID="dRM-Eg-e4c">
@@ -759,13 +795,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tA-Pj7">
-                                <rect key="frame" x="5" y="202" width="384" height="221"/>
+                                <rect key="frame" x="5" y="202" width="404" height="221"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="221" id="jIz-Ck-Lyg"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvF-sq-imU">
-                                <rect key="frame" x="64" y="143" width="266" height="44"/>
+                                <rect key="frame" x="64" y="143" width="286" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="nAf-6e-gs0"/>
                                     <constraint firstAttribute="width" constant="287" id="pEm-eO-cqK"/>
@@ -783,7 +819,7 @@
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mdh-QC-bAf">
-                                <rect key="frame" x="208" y="623" width="124" height="64"/>
+                                <rect key="frame" x="228" y="623" width="124" height="64"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="QhM-1c-2TI"/>
                                     <constraint firstAttribute="width" constant="124" id="WzC-Xt-lgA"/>
@@ -874,7 +910,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-mP-rri">
-                                <rect key="frame" x="251" y="45" width="143" height="36"/>
+                                <rect key="frame" x="271" y="45" width="143" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="6nz-ne-059"/>
                                     <constraint firstAttribute="height" constant="36" id="Z3R-mR-Laz"/>
@@ -993,7 +1029,6 @@
     <resources>
         <image name="mic" catalog="system" width="108" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
-        <image name="proglang" width="2000" height="2000"/>
         <image name="swift" width="860" height="480"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
