@@ -7,16 +7,30 @@
 
 import UIKit
 import SwiftUI
+import FacebookLogin
 
-class MatchQuizVC: UIViewController {
 
-    @IBSegueAction func hostUI(_ coder: NSCoder) -> UIViewController? {
+class WelcomeVC: UIViewController {
+
+
+    @IBSegueAction func quiz3UI(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: quiz3())
     }
+    
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        //facebook login
+        let loginButton = FBLoginButton()
+        loginButton.center = CGPoint( x: 130, y: 110)
 
+        view.addSubview(loginButton)
+        if let token = AccessToken.current,
+                !token.isExpired {
+            
         // Do any additional setup after loading the view.
+        }
     }
     
 

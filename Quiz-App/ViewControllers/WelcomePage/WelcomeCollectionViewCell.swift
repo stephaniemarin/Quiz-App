@@ -22,6 +22,5 @@ class WelcomeCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var proglang: UIImageView!
     
     @IBOutlet weak var logOutbtn: UIButton!
-    
-    
+ 
 }

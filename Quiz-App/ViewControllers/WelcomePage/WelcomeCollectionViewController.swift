@@ -58,7 +58,7 @@ class WelcomeCollectionViewController: UICollectionViewController{
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 7
+        return 8
     }
 
 
@@ -79,19 +79,19 @@ class WelcomeCollectionViewController: UICollectionViewController{
         
         let payAndFeedback = collectionView.dequeueReusableCell(withReuseIdentifier: "payAndFeedback", for: indexPath)
         let sampleQuiz = collectionView.dequeueReusableCell(withReuseIdentifier: "sampleQuiz", for: indexPath)
-        
+        let matchQuiz = collectionView.dequeueReusableCell(withReuseIdentifier: "matchQuiz", for: indexPath)
         
         
         switch indexPath.section{
         case 0:
-            //facebook login
-            let loginButton = FBLoginButton()
-            loginButton.center = CGPoint( x: 110, y: 110)
-            view.addSubview(loginButton)
-            if let token = AccessToken.current,
-                    !token.isExpired {
-                
-            }
+//            //facebook login
+//            let loginButton = FBLoginButton()
+//            loginButton.center = CGPoint( x: 110, y: 110)
+//            view.addSubview(loginButton)
+//            if let token = AccessToken.current,
+//                    !token.isExpired {
+//                
+//            }
             
             loginCell.loginbtn.layer.cornerRadius = 20
             loginCell.logOutbtn.layer.cornerRadius = 20
@@ -112,6 +112,8 @@ class WelcomeCollectionViewController: UICollectionViewController{
             return payAndFeedback
         case 6:
             return sampleQuiz
+        case 7:
+            return matchQuiz
         default:
             return loginCell
         }
@@ -125,24 +127,21 @@ class WelcomeCollectionViewController: UICollectionViewController{
         
     }
     
-    private func generateLayout() ->UICollectionViewLayout{
-       //item size
-        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(3.0), heightDimension: .fractionalHeight(2.0))
-        
-        // declaring item
-        let item = NSCollectionLayoutItem(layoutSize: itemSize)
-        //group size
-        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.0), heightDimension: .absolute(30.0))
-        //declaring group horizontal
-        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 7)
-        //section
-        let section = NSCollectionLayoutSection(group: group)
-        let layout = UICollectionViewCompositionalLayout(section: section)
-        
-        return layout
-        //after this tell viewdidload() to use the new layout
-    }
-    
-    
-
+//    private func generateLayout() ->UICollectionViewLayout{
+//       //item size
+//        let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(3.0), heightDimension: .fractionalHeight(2.0))
+//
+//        // declaring item
+//        let item = NSCollectionLayoutItem(layoutSize: itemSize)
+//        //group size
+//        let groupSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(2.0), heightDimension: .absolute(30.0))
+//        //declaring group horizontal
+//        let group = NSCollectionLayoutGroup.horizontal(layoutSize: groupSize, subitem: item, count: 7)
+//        //section
+//        let section = NSCollectionLayoutSection(group: group)
+//        let layout = UICollectionViewCompositionalLayout(section: section)
+//
+//        return layout
+//        //after this tell viewdidload() to use the new layout
+//    }
 }
