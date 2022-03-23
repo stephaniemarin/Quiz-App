@@ -16,6 +16,12 @@ struct CurrentUserWel {
 
 class WelcomeVC: UIViewController {
 
+    var CurrentUser:String = ""
+    var UserQuestionsAnswered = 0
+    var UserQuestionsCorrect = 0
+    
+    
+    
     @IBOutlet weak var loginoutBtn: UIButton!
     //labels z
     @IBOutlet weak var name: UILabel!
@@ -37,6 +43,16 @@ class WelcomeVC: UIViewController {
     }
     
 
+    override func viewWillAppear(_ animated: Bool){
+    //   super.viewWillAppear(animated)
+        let defaults = UserDefaults.standard
+        UserQuestionsAnswered = defaults.integer(forKey:"UQA")
+        UserQuestionsCorrect = defaults.integer(forKey:"UQC")
+        print("I entered this method now")
+    }
+    
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,13 +60,16 @@ class WelcomeVC: UIViewController {
         //loginAndOUT()
         let defaults = UserDefaults.standard
         let Nname = defaults.string(forKey: "username")
+        UserQuestionsAnswered = defaults.integer(forKey:"UQA")
+        UserQuestionsCorrect = defaults.integer(forKey:"UQC")
 
         if Nname != "" && Nname != nil{
             loginoutBtn.setTitle("Settings",for: .normal)
-            name.text = Nname
+            name.text = "Welcome " + Nname!
             titleScores.text = "Your Quiz Scores"
             subscriptionlb.text = "Your subcription Quizes"
             //loginoutBtn = sender.setTitle("settings", for: .normal)
+            titleScores.text = "Cumulative Score:  \(UserQuestionsCorrect) / \(UserQuestionsAnswered)"
         }
         else {
             subscriptionlb.text = "Subscribe for more quizes!"

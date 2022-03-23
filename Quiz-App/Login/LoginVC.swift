@@ -136,6 +136,8 @@ class LoginVC: UIViewController {
 
             defaults.set( God, forKey:"username")
             defaults.set(true,forKey:"check")
+        defaults.set(0,forKey:"UQA")
+        defaults.set(0,forKey:"UQC")
             
        
             //go to welcome scene
@@ -164,6 +166,8 @@ class LoginVC: UIViewController {
         //if Nname != "" && Nname != nil {
             
             defaults.set( "", forKey:"username")
+        defaults.set(0,forKey:"UQA")
+        defaults.set(0,forKey:"UQC")
             defaults.set(true,forKey:"check")
             
             let signEmpty : String = ""

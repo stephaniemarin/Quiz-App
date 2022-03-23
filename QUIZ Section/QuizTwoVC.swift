@@ -155,6 +155,16 @@ class QuizTwoVC: UIViewController {
                 gravityForFalse = true
                 numCorrect += 1
                
+                
+                
+                let defaults = UserDefaults.standard
+               // defaults.set(0,forKey:"UQC")
+                let frog = defaults.integer(forKey: "UQC") + 1
+                defaults.set(frog,forKey:"UQC")
+            
+                
+                
+                
                 respondView.text="Correct! " + quizTwoQuestions[currentQuestion].comment
                 view.backgroundColor = .green
             }
@@ -170,6 +180,17 @@ class QuizTwoVC: UIViewController {
             if idQ == false {
                 gravityForFalse = true
                 numCorrect += 1
+                
+                
+                
+                let defaults = UserDefaults.standard
+               // defaults.set(0,forKey:"UQC")
+                let frog = defaults.integer(forKey: "UQC") + 1
+                defaults.set(frog,forKey:"UQC")
+            
+                
+                
+                
                 
                 respondView.text="Correct! " + quizTwoQuestions[currentQuestion].comment
                 view.backgroundColor = .green
@@ -243,6 +264,13 @@ class QuizTwoVC: UIViewController {
         FalseBtn.isHidden = false
         Prodding.shuffle()
         attemptedQuestions += 1
+        
+        let defaults = UserDefaults.standard
+       // defaults.set(0,forKey:"UQC")
+        let frog = defaults.integer(forKey: "UQA") + 1
+        defaults.set(frog,forKey:"UQA")
+        
+        
         Scoring.text = "Score: \(numCorrect) : \(attemptedQuestions)"
         view.backgroundColor = .white
       //  FalseBtn.backgroundColor = .brown

@@ -54,6 +54,8 @@ class CreateAccountVC: UIViewController {
         let defaults = UserDefaults.standard
         defaults.set(God, forKey:"username")
         defaults.set(true,forKey:"check")
+        defaults.set(0,forKey:"UQA")
+        defaults.set(0,forKey:"UQC")
         
         
 //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)

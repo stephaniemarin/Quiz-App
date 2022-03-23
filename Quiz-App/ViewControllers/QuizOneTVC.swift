@@ -225,10 +225,28 @@ class QuizOneTVC: UITableViewController {
        
        
        QuestionsAnswered+=1
+       
+       let defaults = UserDefaults.standard
+      // defaults.set(0,forKey:"UQC")
+       let frog = defaults.integer(forKey: "UQA") + 1
+       defaults.set(frog,forKey:"UQA")
+    
+       
        tableView.deselectRow(at: indexPath, animated:true)
        if indexPath.row == answerKey[whichQuestion] {
            tableView.cellForRow(at: indexPath)?.backgroundColor = .green
            QuestionsCorrect+=1
+           
+           
+           
+           let defaults = UserDefaults.standard
+          // defaults.set(0,forKey:"UQC")
+           let frog = defaults.integer(forKey: "UQC") + 1
+           defaults.set(frog,forKey:"UQC")
+  
+           
+           
+           
            tableView.allowsSelection = false
            
            self.whichQuestion += 1
