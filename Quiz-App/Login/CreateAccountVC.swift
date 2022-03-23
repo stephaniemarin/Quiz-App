@@ -56,6 +56,10 @@ class CreateAccountVC: UIViewController {
         defaults.set(true,forKey:"check")
         
         
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+//        let goToWelcome = storyBoard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeVC
+//        self.present(goToWelcome,animated: true,completion: nil)
+//        
        // print(name.text)
       //  print(password1.text)
     }

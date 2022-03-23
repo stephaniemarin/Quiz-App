@@ -22,21 +22,39 @@ struct quiz3: View {
                     .font(.largeTitle)
                     .padding(.top, 50.0)
                 Spacer()
-                HStack{
+                VStack{
                     HStack{
-                        Spacer()
-                        Image("quiz" + String(randomNum))
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .frame(width: 140, height: 140)
-                        Spacer()
-                        Image("ans" + String(randomNum2))
-                            .resizable()
-                            .aspectRatio( contentMode: .fit)
-                            .frame(width: 140, height: 140)
-                        Spacer()
+                        HStack{
+                            Spacer()
+                            Image("quiz" + String(randomNum))
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 190, height: 160)
+                            Spacer()
+                            Image("ans" + String(randomNum2))
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 190, height: 140)
+                            Spacer()
+                        }
+                    }
+                    HStack{
+                        HStack{
+                            Spacer()
+                            Image("quiz" + String(randomNum))
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 190, height: 140)
+                            Spacer()
+                            Image("ans" + String(randomNum2))
+                                .resizable()
+                                .aspectRatio( contentMode: .fit)
+                                .frame(width: 190, height: 140)
+                            Spacer()
+                        }
                     }
                 }
+                
                 
                 
                 
@@ -69,7 +87,9 @@ struct quiz3: View {
                          .font(.title)
                          .cornerRadius(15)
                     }
+                    
                     }
+                    
  
                     
                 Spacer()
