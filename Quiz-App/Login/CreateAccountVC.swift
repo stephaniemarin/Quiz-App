@@ -7,7 +7,12 @@
 
 import UIKit
 
- 
+struct CurrentUserSI {
+   var  name : String
+    var score : Double
+    var isAdmin : Bool
+}
+
 class CreateAccountVC: UIViewController {
      
     
@@ -18,7 +23,8 @@ class CreateAccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        
+        let isAdminLabel : UILabel = UILabel(frame:CGRect(x:140, y:440,width:160,height:40))
+        isAdminLabel.text = "Check for Admin"
         // Do any additional setup after loading the view.
     }
     
@@ -49,10 +55,12 @@ class CreateAccountVC: UIViewController {
         // assuming enough checking
         let God = name.text!
         let Angel = password1.text!
+//        let admin =
         let successSave = KeychainWrapper.standard.set(Angel, forKey: God)
        // print(successSave)
         let defaults = UserDefaults.standard
         defaults.set(God, forKey:"username")
+       // defaults.set()
         defaults.set(true,forKey:"check")
         defaults.set(0,forKey:"UQA")
         defaults.set(0,forKey:"UQC")

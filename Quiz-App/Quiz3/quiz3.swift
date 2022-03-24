@@ -9,13 +9,16 @@ import SwiftUI
 
 struct quiz3: View {
     
-    @State private var randomNum = 1
-    @State private var randomNum2 = 2
-    @State private var score = 0
+    @State private var randomNum : Int = 1
+    @State private var randomNum2 : Int = 1
+    @State private var labelAnswer : [String] = [ "Array", "Dictionary"]
+    @State private var score : Int = 0
+    @State private var totalQuestions : Int = 4
+    @State private var totalAnswered : Int!
     
     var body: some View {
         ZStack{
-            LinearGradient(gradient: Gradient(colors: [.white, .yellow]), startPoint: .topLeading, endPoint: .bottomTrailing)
+            LinearGradient(gradient: Gradient(colors: [.yellow, .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             VStack{
                 Text("Matching Quiz")
@@ -41,12 +44,13 @@ struct quiz3: View {
                     HStack{
                         HStack{
                             Spacer()
-                            Image("quiz" + String(randomNum))
+                            Image("quiz" + String(randomNum+1))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
                                 .frame(width: 190, height: 140)
                             Spacer()
-                            Image("ans" + String(randomNum2))
+                            
+                            Image("ans" + String(randomNum2+1))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
                                 .frame(width: 190, height: 140)
@@ -55,27 +59,43 @@ struct quiz3: View {
                     }
                 }
                 
-                
-                
+            VStack{
+                    
                 
                 HStack {
                     Spacer()
                     Button(action:{
-                        self.randomNum = Int.random(in: 1...2)
-                        self.randomNum2 = Int.random(in: 1...2)
+                        self.randomNum = Int.random(in: 1...4)
+                        
                    
                     }){
                     label: do {
-                        Text("New Cards")
+                        Text("New Questions")
                          .frame(width: 190, height: 40)
-                         .background(Color.orange)
+                         .background(Color.yellow)
                          .font(.title)
                          .cornerRadius(15)
-                }
+                    }
                 
                     }
                     
-                    
+                    Button(action:{
+                        
+                            self.randomNum2 = Int.random(in: 1...4)
+                     
+                    }){ label: do {
+                        Text("New Answers")
+                         .frame(width: 190, height: 40)
+                         .background(Color.yellow)
+                         .font(.title)
+                         .cornerRadius(15)
+                    }
+                        
+
+                    }
+                Spacer()
+                }
+                HStack {
                     Button(action:{
                         if (self.randomNum == (self.randomNum2 )){
                             score += 1
@@ -83,20 +103,21 @@ struct quiz3: View {
                     }){ label: do {
                         Text("Is a Match!")
                          .frame(width: 190, height: 40)
-                         .background(Color.orange)
+                         .background(Color.yellow)
                          .font(.title)
                          .cornerRadius(15)
                     }
                     
                     }
-                    
- 
-                    
-                Spacer()
-                        
-                        
-                        
                 }
+                //button to verify match
+                HStack{
+                    
+                }
+                
+                
+            }
+                
                 HStack{
                     
                     Spacer()
