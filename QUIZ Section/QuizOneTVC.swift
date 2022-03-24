@@ -37,12 +37,28 @@ class QuizOneTVC: UITableViewController {
    var AllQuiz = [[String]]()
     var AQuiz = [String]()
     var answerKey = [Int]()
+    var timer = Timer()
+ 
     
-   func ConfigureUI(){
-       
-      // TableV.reloadData()
-       
-   }
+    override func viewWillDisappear(_ animated: Bool) {
+       timer.invalidate()
+        let defaults = UserDefaults.standard
+        var  groundScore = defaults.object(forKey:"Scores") as! [String:Double]
+        
+        var AAA = defaults.integer(forKey:"UQA")
+        var CCC = defaults.integer(forKey:"UQC")
+        var TOP = Double(CCC)/Double(AAA)
+        var roundTop = round(TOP*100)/100.0
+        
+        var UName = defaults.string(forKey:"username")
+        groundScore[UName!]=roundTop
+        
+        defaults.set(groundScore,forKey:"Scores")
+     
+    }
+    
+    
+    
    override func viewDidLoad() {
        super.viewDidLoad()
        if let fileURL = Bundle.main.url(forResource: "IOS", withExtension: "sqlite") {
@@ -118,7 +134,7 @@ class QuizOneTVC: UITableViewController {
            
            
            
-           let timer = Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(fireTimer),userInfo:nil,repeats:true)
+           timer = Timer.scheduledTimer(timeInterval:1.0,target:self,selector:#selector(fireTimer),userInfo:nil,repeats:true)
            //fireTimer()
            print("Welll I printed here")
            
@@ -271,7 +287,7 @@ class QuizOneTVC: UITableViewController {
  
    
    @IBAction func handlerNewQuestion() {
-       Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { (timer) in
+       Timer.scheduledTimer(withTimeInterval: 1.0, repeats: false) { (timer) in
           
           
          //  configureUI()
