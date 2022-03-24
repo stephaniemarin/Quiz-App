@@ -19,12 +19,14 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var password2: UITextField!
     @IBOutlet weak var password1: UITextField!
     
+    @IBOutlet weak var Payment: UILabel!
     @IBOutlet weak var name: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
    
-        let isAdminLabel : UILabel = UILabel(frame:CGRect(x:140, y:440,width:160,height:40))
-        isAdminLabel.text = "Check for Admin"
+
+        Payment.text = "By Signing in you are stipulating a promised payment of your future earnings, similar to the contract signed by you as a Software Engineer for Revature. To disavow future payments after signing in go to Subscription Link."
+
         // Do any additional setup after loading the view.
     }
     
@@ -64,8 +66,16 @@ class CreateAccountVC: UIViewController {
         defaults.set(true,forKey:"check")
         defaults.set(0,forKey:"UQA")
         defaults.set(0,forKey:"UQC")
-        
-        
+        var temp = defaults.object(forKey:"Users") as! [String]
+        if !temp.contains(God) {
+            temp.insert(God,at:0)
+            defaults.set(temp,forKey:"Users")
+            print(temp)
+            let trial = defaults.object(forKey:"Users") as! [String]
+            print("To here")
+            print(trial)
+            
+        }
 //        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
 //        let goToWelcome = storyBoard.instantiateViewController(withIdentifier: "Welcome") as! WelcomeVC
 //        self.present(goToWelcome,animated: true,completion: nil)

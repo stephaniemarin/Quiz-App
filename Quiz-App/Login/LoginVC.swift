@@ -64,7 +64,6 @@ class LoginVC: UIViewController {
             
             let CASH : UILabel = UILabel(frame:CGRect(x:150,y:400, width:160,height:40))
             CASH.text = "Paid Subscription"
-          
             
             view.addSubview(CASH)
            
@@ -123,9 +122,23 @@ class LoginVC: UIViewController {
         // money things
     }
     
-    
+ 
     @IBAction func EnterMainCenter(_ sender: Any) {
-        
+        if name.text! == "Admin" && password.text == "00000"{
+            
+            let defaults = UserDefaults.standard
+           // let Nname = defaults.string(forKey: "username")
+
+                defaults.set( "Admin", forKey:"username")
+                defaults.set(true,forKey:"check")
+            defaults.set(1000,forKey:"UQA")
+            defaults.set(1000,forKey:"UQC")
+            
+            
+            print("I am here trying to determine if I can sign in as Admin \(name.text)  \(password.text)")
+          //  self.dismiss(animated: true)
+        }
+        else {
         if name.text == "" {
             name.shake()
             return
@@ -148,7 +161,7 @@ class LoginVC: UIViewController {
             defaults.set(true,forKey:"check")
         defaults.set(0,forKey:"UQA")
         defaults.set(0,forKey:"UQC")
-            
+        }
        
             //go to welcome scene
 //            let mainStoryBoard = UIStoryboard(name: "Main", bundle: Bundle.main)

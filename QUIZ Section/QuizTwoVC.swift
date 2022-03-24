@@ -50,6 +50,32 @@ class QuizTwoVC: UIViewController {
     @IBOutlet weak var ContinueBtn: UIButton!
    
 
+    override func viewWillDisappear(_ animated: Bool) {
+      // timer.invalidate()
+        // do not want timer is my thought
+        let defaults = UserDefaults.standard
+        var  groundScore = defaults.object(forKey:"Scores") as! [String:Double]
+        
+        var AAA = defaults.integer(forKey:"UQA")
+        var CCC = defaults.integer(forKey:"UQC")
+        var TOP = Double(CCC)/Double(AAA)
+        var roundTop = round(TOP*100)/100.0
+        
+        var UName = defaults.string(forKey:"username")
+        groundScore[UName!]=roundTop
+        
+        defaults.set(groundScore,forKey:"Scores")
+     
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     override func viewDidLoad() {
         
        super.viewDidLoad()
@@ -147,6 +173,10 @@ class QuizTwoVC: UIViewController {
         
         
            }
+    
+  
+    
+    
     func checkAnswer(idQ: Bool) {
         let veracity = quizTwoQuestions[currentQuestion].answer
         if veracity {//veracity ==true
