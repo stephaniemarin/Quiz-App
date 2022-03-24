@@ -179,6 +179,7 @@
 				9030E09127E2BAC40026ED31 /* ViewControllers */,
 				9030E09027E2B8D00026ED31 /* storyboard */,
 				9030E06927E2A4B30026ED31 /* Assets.xcassets */,
+				909BFCF127ECBE0C00D85D8F /* MQimages */,
 				909BFC8827E8EB3400D85D8F /* Extensions.swift */,
 			);
 			path = "Quiz-App";
@@ -275,6 +276,13 @@
 				909BFCA527E9CC6C00D85D8F /* quiz3.swift */,
 			);
 			path = Quiz3;
+			sourceTree = "<group>";
+		};
+		909BFCF127ECBE0C00D85D8F /* MQimages */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MQimages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

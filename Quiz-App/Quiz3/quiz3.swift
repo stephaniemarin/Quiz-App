@@ -8,64 +8,82 @@
 import SwiftUI
 
 struct quiz3: View {
+
     
-    @State private var randomNum : Int = 1
-    @State private var randomNum2 : Int = 1
-    @State private var labelAnswer : [String] = [ "Array", "Dictionary"]
+    @State  var randomQ : Int = 3
+    @State  var randomA : Int = 2
     @State private var score : Int = 0
-    @State private var totalQuestions : Int = 4
-    @State private var totalAnswered : Int!
+    @State private var totalQuestions : Int = 5
+    @State private var totalwrong : Int = 0
+    
+   
+    @State private var alerSubmit = false
     
     var body: some View {
+        
+        var topQ : Int = randomQ
+        var topA : Int = randomQ
+        
+        var bottomQ : Int = randomA
+        var bottomA : Int = randomA
+        
+        //section old
         ZStack{
             LinearGradient(gradient: Gradient(colors: [.yellow, .white]), startPoint: .topLeading, endPoint: .bottomTrailing)
                 .ignoresSafeArea()
             VStack{
                 Text("Matching Quiz")
-                    .font(.largeTitle)
-                    .padding(.top, 50.0)
-                Spacer()
+                    .font(.title)
+                    .padding(.top)
+                
                 VStack{
-                    HStack{
-                        HStack{
-                            Spacer()
-                            Image("quiz" + String(randomNum))
+                    VStack{
+                            Image("quiz" + String(topQ))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
-                                .frame(width: 190, height: 160)
-                            Spacer()
-                            Image("ans" + String(randomNum2))
-                                .resizable()
-                                .aspectRatio( contentMode: .fit)
-                                .frame(width: 190, height: 140)
-                            Spacer()
-                        }
+                                .frame(width: 380, height: 210)
+                                
+                        
+//                            Image("quiz" + String(bottomQ))
+//                                .resizable()
+//                                .aspectRatio( contentMode: .fit)
+//                                .frame(width: 190, height: 140)
+
+                        
                     }
-                    HStack{
-                        HStack{
-                            Spacer()
-                            Image("quiz" + String(randomNum+1))
+                    VStack{
+                    
+                            Image("ans" + String(bottomA))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
-                                .frame(width: 190, height: 140)
-                            Spacer()
-                            
-                            Image("ans" + String(randomNum2+1))
-                                .resizable()
-                                .aspectRatio( contentMode: .fit)
-                                .frame(width: 190, height: 140)
-                            Spacer()
-                        }
+                                .frame(width: 380, height: 210)
+//
+//                            Image("ans" + String(bottomA))
+//                                .resizable()
+//                                .aspectRatio( contentMode: .fit)
+//                                .frame(width: 190, height: 140)
+                           
+                        
                     }
                 }
-                
+                .padding()
             VStack{
-                    
-                
                 HStack {
                     Spacer()
                     Button(action:{
-                        self.randomNum = Int.random(in: 1...4)
+
+                        randomQ = Int.random(in: 1..<totalQuestions)
+                        
+//                        randomA = Int.random(in: 1..<totalQuestions)
+                        
+//                        if (topQ == bottomQ)&&(bottomQ == topQ)
+//                        {
+//                            topQ = Int.random( in: 1..<5)
+//                        }
+//                        else{
+//                            randomQ = Int.random(in: 1..<totalQuestions)
+//                            randomA = Int.random(in: 1..<totalQuestions)
+//                        }
                         
                    
                     }){
@@ -80,8 +98,8 @@ struct quiz3: View {
                     }
                     
                     Button(action:{
-                        
-                            self.randomNum2 = Int.random(in: 1...4)
+                        randomA = Int.random(in: 1..<totalQuestions)
+                            
                      
                     }){ label: do {
                         Text("New Answers")
@@ -97,9 +115,13 @@ struct quiz3: View {
                 }
                 HStack {
                     Button(action:{
-                        if (self.randomNum == (self.randomNum2 )){
+                        if (topQ == bottomA){
                             score += 1
                      }
+                        else
+                        {
+                            totalwrong += 1
+                        }
                     }){ label: do {
                         Text("Is a Match!")
                          .frame(width: 190, height: 40)
@@ -116,8 +138,7 @@ struct quiz3: View {
                 }
                 
                 
-            }
-                
+            } .padding()
                 HStack{
                     
                     Spacer()
@@ -125,11 +146,35 @@ struct quiz3: View {
                         .font(.title)
                         .foregroundColor(Color(hue: 0.081, saturation: 1.0, brightness: 1.0))
                     Spacer()
-                    Text(String(score))
+                    Text(String(score) + "/")
                         .font(.title)
+                    Text(String(totalwrong))
+                        .font(.title)
+                        .colorMultiply(Color.red)
                     Spacer()
                     
-                }; Spacer()
+                } .padding()
+                HStack {
+                    Spacer()
+                    Button(action: {
+                        alerSubmit = true
+                    
+                    })
+                    { label: do {
+                        Text("Submit Quiz")
+                         .frame(width: 190, height: 40)
+                         .background(Color.white)
+                         .font(.title)
+                         .cornerRadius(15)
+                         
+                    }
+                    
+                    
+                    }
+                    .alert("Submit Quiz" , isPresented: $alerSubmit) {
+                        Button("ok"){}
+                    };Spacer()
+                }
             }
              
         }
