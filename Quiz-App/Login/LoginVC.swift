@@ -13,6 +13,7 @@ import AVFoundation
 struct CurrentUser {
    var  name : String
     var score : Double
+    var isAdmin : Bool
 }
 
 class LoginVC: UIViewController {
@@ -41,6 +42,7 @@ class LoginVC: UIViewController {
         
         let defaults = UserDefaults.standard
         let Nname = defaults.string(forKey: "username")
+       // let admin = defaults.bool(forKey: "check")
         if Nname != "" && Nname != nil {
             ContinuedSignInCheckBox.startHidden()
            PAYCASH.startHidden()
@@ -53,6 +55,9 @@ class LoginVC: UIViewController {
             
             let signInLabel : UILabel = UILabel(frame:CGRect(x:150, y:340,width:160,height:40))
             signInLabel.text = "Stay Logged In"
+            
+            let isAdminLabel : UILabel = UILabel(frame:CGRect(x:140, y:440,width:160,height:40))
+            isAdminLabel.text = "You are an Admin"
            
             view.addSubview(signInLabel)
            
@@ -64,6 +69,7 @@ class LoginVC: UIViewController {
            
             
             name.text = Nname
+            
             //display username to label
             let userNamelb : UILabel = UILabel(frame: CGRect(x:150, y:300, width: 160, height: 40))
             userNamelb.text = Nname
@@ -73,6 +79,7 @@ class LoginVC: UIViewController {
             PAYCASH.addGestureRecognizer(CGsture)
             let gesture = UITapGestureRecognizer(target:self,action: #selector(didTapCheckBox))
             ContinuedSignInCheckBox.addGestureRecognizer(gesture)
+            let admingesture = UITapGestureRecognizer(target: self, action: #selector(isTapAdmin))
             let checked = defaults.bool(forKey: "check")
             ContinuedSignInCheckBox.isChecked = checked
          
@@ -93,6 +100,9 @@ class LoginVC: UIViewController {
             
             
     }
+    }
+    @objc func isTapAdmin(){
+        //isadminlabel
     }
     
     @objc func didTapCheckBox(){
@@ -179,7 +189,9 @@ class LoginVC: UIViewController {
         //if Nname != "" && Nname != nil {
             
             defaults.set( "", forKey:"username")
+        //num questions
         defaults.set(0,forKey:"UQA")
+        //num correct questions
         defaults.set(0,forKey:"UQC")
             defaults.set(true,forKey:"check")
             
