@@ -17,6 +17,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="5o8-oP-tL2">
+                                <rect key="frame" x="-132" y="-196" width="960" height="1151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign In Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vh7-No-obe">
                                 <rect key="frame" x="95" y="112" width="225" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -100,7 +106,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5g2-fR-tMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-4858" y="652"/>
+            <point key="canvasLocation" x="-4859.420289855073" y="651.5625"/>
         </scene>
         <!--Create AccountVC-->
         <scene sceneID="24H-fy-MiW">
@@ -110,10 +116,16 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="Eqf-Lq-95L">
+                                <rect key="frame" x="-202" y="-109" width="960" height="1151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sign Up Page" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kP2-0O-xJC">
                                 <rect key="frame" x="95" y="110" width="225" height="37"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -170,8 +182,8 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtL-lW-VYJ">
-                                <rect key="frame" x="37" y="616" width="303" height="127"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UtL-lW-VYJ">
+                                <rect key="frame" x="56" y="614" width="303" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
@@ -191,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tHq-pD-D4F" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3771" y="652"/>
+            <point key="canvasLocation" x="-3771.0144927536235" y="651.5625"/>
         </scene>
         <!--LEARNT-->
         <scene sceneID="fGe-0c-TgT">
@@ -321,11 +333,11 @@
             <objects>
                 <viewController storyboardIdentifier="Welcome" title="Welcome" id="JF4-1P-kCo" customClass="WelcomeVC" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fQK-Zz-sc1">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="Pub-Mz-PbE">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="Pub-Mz-PbE">
+                                <rect key="frame" x="-125" y="-21" width="818" height="1013"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
@@ -339,7 +351,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Lhj-zp-AFn" kind="show" id="2Uy-It-0B3"/>
@@ -354,7 +366,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="w0g-h7-ywY" kind="show" id="8ZX-Mg-X3a"/>
@@ -369,7 +381,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="zVA-2n-UuY" kind="show" id="J9Z-OD-fSl"/>
@@ -384,7 +396,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="AOb-Jm-0e7" kind="show" destinationCreationSelector="quiz3UI:" id="dOC-D4-Rhd"/>
@@ -460,7 +472,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="dCE-zF-j80" kind="show" id="oCW-e0-mpB"/>
@@ -475,7 +487,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <color key="baseForegroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="rz1-j6-lCm" kind="show" destinationCreationSelector="gotoUserList:" id="WDl-D9-D3E"/>
@@ -506,7 +518,7 @@
                         <viewLayoutGuide key="safeArea" id="a5B-QJ-Fy5"/>
                         <color key="backgroundColor" red="1" green="1" blue="0.94509803921568625" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Welome" id="DAb-5Y-OKv"/>
+                    <navigationItem key="navigationItem" title="Welcome" id="DAb-5Y-OKv"/>
                     <connections>
                         <outlet property="HighScores" destination="gG2-Sh-8km" id="fbS-0F-aUp"/>
                         <outlet property="UserList" destination="tfm-tx-th0" id="5a7-TM-5ef"/>
@@ -532,9 +544,15 @@
             <objects>
                 <viewController storyboardIdentifier="AdminDataBasePage" id="dCE-zF-j80" customClass="AdminDataBaseVC" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="K3H-SL-Xfh">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="t8q-jM-kS3">
+                                <rect key="frame" x="-273" y="-155" width="960" height="1151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Make Data Base" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hln-dZ-S6F">
                                 <rect key="frame" x="66" y="44" width="283" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -683,7 +701,13 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="jhO-h8-6s5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <imageView key="tableFooterView" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="topRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backgroundY" id="yNQ-X5-6Tv">
+                            <rect key="frame" x="0.0" y="196" width="414" height="1151"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                        </imageView>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="129" id="30k-jX-uC7">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="129"/>
@@ -732,6 +756,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="nUd-8q-TKD">
+                                <rect key="frame" x="-273" y="-128" width="960" height="1151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subscription view" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IbR-pa-S8s">
                                 <rect key="frame" x="122" y="260" width="171" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -776,6 +806,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="bXd-yH-Jyt">
+                                <rect key="frame" x="-273" y="-128" width="960" height="1151"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Share your Feedback!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qA9-Kj-rrv">
                                 <rect key="frame" x="20" y="117" width="374" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -841,7 +877,7 @@
             <objects>
                 <viewController id="zVA-2n-UuY" customClass="QuizTwoVC" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nq9-vb-LS2">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eP3-tA-Pj7">
@@ -942,7 +978,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-mP-rri">
-                                <rect key="frame" x="271" y="45" width="143" height="36"/>
+                                <rect key="frame" x="251" y="45" width="143" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="6nz-ne-059"/>
                                     <constraint firstAttribute="height" constant="36" id="Z3R-mR-Laz"/>
@@ -989,7 +1025,7 @@
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="MZ1-k9-SoR"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.94502019559999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="cvF-sq-imU" firstAttribute="top" secondItem="MZ1-k9-SoR" secondAttribute="top" constant="55" id="0fS-RF-46q"/>
                             <constraint firstItem="eP3-tA-Pj7" firstAttribute="leading" secondItem="MZ1-k9-SoR" secondAttribute="leading" constant="5" id="3ac-K9-fzA"/>
@@ -1030,9 +1066,9 @@
             <objects>
                 <tableViewController title="QuizOneTVC" id="w0g-h7-ywY" customClass="QuizOneTVC" customModule="Quiz_App" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="p2C-oH-cSL">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="0.94509803920000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="129" id="8Rh-Mq-Qor" customClass="CustomHeaderCell" customModule="Quiz_App" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="129"/>
@@ -1079,7 +1115,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="bN2-12-EcE"/>
-        <segue reference="kTG-IU-cdC"/>
+        <segue reference="mvU-nW-dhE"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="backgroundY" width="3001" height="2001"/>
