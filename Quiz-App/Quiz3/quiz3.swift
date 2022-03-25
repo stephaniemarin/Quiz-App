@@ -10,22 +10,17 @@ import SwiftUI
 struct quiz3: View {
 
     
-    @State  var randomQ : Int = 3
-    @State  var randomA : Int = 2
+    @State  var randomQ : Int = 1
+    @State  var randomA : Int = 6
     @State private var score : Int = 0
-    @State private var totalQuestions : Int = 12
-    @State private var totalwrong : Int = 12
+    @State private var totalQuestions : Int = 10
+    @State private var QuestiosAnswered : Int = 0
     
    
     @State private var alerSubmit = false
     
     var body: some View {
         
-        var topQ : Int = randomQ
-        var topA : Int = randomQ
-        
-        var bottomQ : Int = randomA
-        var bottomA : Int = randomA
         
         //section old
         ZStack{
@@ -37,23 +32,90 @@ struct quiz3: View {
                     .padding(.top)
                 
                 VStack{
-                    VStack{
-                            Image("quiz" + String(topQ))
+                    HStack{
+                        Spacer()
+                        Text("Question")
+                            .font(.headline)
+                        
+                        Spacer()
+                        Button(action:{
+                            
+                            randomQ += 1
+                            if( randomQ > totalQuestions){
+                                randomQ = 1
+                            }
+                            
+                            
+//                            for question in 1...totalQuestions{
+//
+//                                print(question)
+//
+//                                guard (question == randomQ) else
+//                                {
+//                                    randomQ += question
+//                                    print(randomQ)
+//                                    break
+//                                }
+//                                if (question >= totalQuestions){
+//
+//                                }
+//
+//                            }
+                           // randomQ = Int.random(in: 1..<totalQuestions)
+                            
+                       
+                        }){
+                        label: do {
+                            Text("New Question")
+                             .frame(width: 190, height: 40)
+                             .background(Color.yellow)
+                             .font(.title)
+                             .cornerRadius(15)
+                        }
+                    
+                        };Spacer()
+                            
+                    }
+                        Image("quiz" + String(randomQ))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
                                 .frame(width: 380, height: 210)
                                 
-                        
+                                .padding()
 //                            Image("quiz" + String(bottomQ))
 //                                .resizable()
 //                                .aspectRatio( contentMode: .fit)
 //                                .frame(width: 190, height: 140)
 
-                        
-                    }
-                    VStack{
                     
-                            Image("ans" + String(bottomA))
+                    
+                    VStack{
+                        HStack{
+                            Spacer()
+                            Text("Answer:")
+                                .font(.headline)
+                                .padding(.top)
+                            Spacer()
+                            Button(action:{
+                                randomA += 1
+                                if( randomA > totalQuestions){
+                                    randomA = 1
+                                }
+                             
+                            }){ label: do {
+                                Text("New Answer")
+                                 .frame(width: 190, height: 40)
+                                 .background(Color.yellow)
+                                 .font(.title)
+                                 .cornerRadius(15)
+                            }
+                                
+
+                            }
+                        Spacer()
+                        }
+                    
+                            Image("ans" + String(randomA))
                                 .resizable()
                                 .aspectRatio( contentMode: .fit)
                                 .frame(width: 380, height: 210)
@@ -69,59 +131,17 @@ struct quiz3: View {
                 .padding()
             VStack{
                 HStack {
-                    Spacer()
-                    Button(action:{
-
-                        randomQ = Int.random(in: 1..<totalQuestions)
-                        
-//                        randomA = Int.random(in: 1..<totalQuestions)
-                        
-//                        if (topQ == bottomQ)&&(bottomQ == topQ)
-//                        {
-//                            topQ = Int.random( in: 1..<5)
-//                        }
-//                        else{
-//                            randomQ = Int.random(in: 1..<totalQuestions)
-//                            randomA = Int.random(in: 1..<totalQuestions)
-//                        }
-                        
-                   
-                    }){
-                    label: do {
-                        Text("New Questions")
-                         .frame(width: 190, height: 40)
-                         .background(Color.yellow)
-                         .font(.title)
-                         .cornerRadius(15)
-                    }
-                
-                    }
+                  
                     
-                    Button(action:{
-                        randomA = Int.random(in: 1..<totalQuestions)
-                            
-                     
-                    }){ label: do {
-                        Text("New Answers")
-                         .frame(width: 190, height: 40)
-                         .background(Color.yellow)
-                         .font(.title)
-                         .cornerRadius(15)
-                    }
-                        
-
-                    }
-                Spacer()
+                    
                 }
                 HStack {
                     Button(action:{
-                        if (topQ == bottomA){
+                        QuestiosAnswered += 1
+                        if (randomQ == randomA){
                             score += 1
                      }
-//                        else
-//                        {
-//                            totalwrong += 1
-//                        }
+        
                     }){ label: do {
                         Text("Is a Match!")
                          .frame(width: 190, height: 40)
@@ -136,9 +156,8 @@ struct quiz3: View {
                 HStack{
                     
                 }
-                
-                
-            } .padding()
+
+            }
                 HStack{
                     
                     Spacer()
@@ -148,7 +167,7 @@ struct quiz3: View {
                     Spacer()
                     Text(String(score) + "/")
                         .font(.title)
-                    Text(String(totalwrong))
+                    Text(String(QuestiosAnswered))
                         .font(.title)
                         .colorMultiply(Color.red)
                     Spacer()
@@ -182,8 +201,13 @@ struct quiz3: View {
     }
 }
 
+func sameQuestion(){
+    
+}
+
 struct quiz3_Previews: PreviewProvider {
     static var previews: some View {
         quiz3()
+.previewInterfaceOrientation(.portrait)
     }
 }

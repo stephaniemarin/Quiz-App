@@ -206,7 +206,6 @@ class WelcomeVC: UIViewController {
            
            
             titleScores.text = "Your Quiz Scores"
-            subscriptionlb.text = "Your subcription Quizes"
             //loginoutBtn = sender.setTitle("settings", for: .normal)
            
         //   createDataBase.isHidden = true
@@ -216,7 +215,6 @@ class WelcomeVC: UIViewController {
             titleScores.text = "Cumulative Score:  \(UserQuestionsCorrect) / \(UserQuestionsAnswered)"
         }
         else {
-            subscriptionlb.text = "Subscribe for more quizes!"
             loginoutBtn.setTitle("Sign In",for: .normal)
             
             multipleChoiceQuiz.isHidden.toggle()
