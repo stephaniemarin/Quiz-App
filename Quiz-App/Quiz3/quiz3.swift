@@ -13,8 +13,8 @@ struct quiz3: View {
     @State  var randomQ : Int = 3
     @State  var randomA : Int = 2
     @State private var score : Int = 0
-    @State private var totalQuestions : Int = 5
-    @State private var totalwrong : Int = 0
+    @State private var totalQuestions : Int = 12
+    @State private var totalwrong : Int = 12
     
    
     @State private var alerSubmit = false
@@ -118,10 +118,10 @@ struct quiz3: View {
                         if (topQ == bottomA){
                             score += 1
                      }
-                        else
-                        {
-                            totalwrong += 1
-                        }
+//                        else
+//                        {
+//                            totalwrong += 1
+//                        }
                     }){ label: do {
                         Text("Is a Match!")
                          .frame(width: 190, height: 40)

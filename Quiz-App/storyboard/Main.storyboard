@@ -324,6 +324,12 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="bottomLeft" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroundY" translatesAutoresizingMaskIntoConstraints="NO" id="Pub-Mz-PbE">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.94901353119999998" green="0.949013412" blue="0.94901353119999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" configurationType="pointSize" pointSize="17" scale="default"/>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PyK-zC-PJN">
                                 <rect key="frame" x="104" y="315" width="206" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -333,7 +339,7 @@
                                     <backgroundConfiguration key="background" strokeWidth="3" strokeOutset="7">
                                         <color key="strokeColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                     </backgroundConfiguration>
-                                    <color key="baseForegroundColor" systemColor="systemYellowColor"/>
+                                    <color key="baseForegroundColor" red="0.80392156859999997" green="0.47843137250000001" blue="0.094117647060000004" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <segue destination="Lhj-zp-AFn" kind="show" id="2Uy-It-0B3"/>
@@ -504,6 +510,7 @@
                     <connections>
                         <outlet property="HighScores" destination="gG2-Sh-8km" id="fbS-0F-aUp"/>
                         <outlet property="UserList" destination="tfm-tx-th0" id="5a7-TM-5ef"/>
+                        <outlet property="backgroundImg" destination="swJ-GV-xZD" id="HMI-8O-kjh"/>
                         <outlet property="createDataBase" destination="qb1-XE-Vxm" id="Ous-DF-rCN"/>
                         <outlet property="feedback" destination="OgJ-n5-Dbv" id="u8B-4b-trC"/>
                         <outlet property="loginoutBtn" destination="zff-kB-FGz" id="f5g-s9-aPx"/>
@@ -518,7 +525,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z4r-z8-cAd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2593" y="627"/>
+            <point key="canvasLocation" x="-2594.202898550725" y="626.78571428571422"/>
         </scene>
         <!--Make Data Base-->
         <scene sceneID="dRM-Eg-e4c">
@@ -935,7 +942,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score: 0 : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2bB-mP-rri">
-                                <rect key="frame" x="251" y="45" width="143" height="36"/>
+                                <rect key="frame" x="271" y="45" width="143" height="36"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="143" id="6nz-ne-059"/>
                                     <constraint firstAttribute="height" constant="36" id="Z3R-mR-Laz"/>
@@ -1075,6 +1082,7 @@
         <segue reference="kTG-IU-cdC"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="backgroundY" width="3001" height="2001"/>
         <image name="mic" catalog="system" width="108" height="128"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <systemColor name="labelColor">

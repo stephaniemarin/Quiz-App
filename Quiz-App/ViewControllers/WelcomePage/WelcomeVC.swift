@@ -22,13 +22,11 @@ class WelcomeVC: UIViewController {
     
     var USERS:[String] = ["Admin","Horses","Mouse","Giraffe","Elephant","Pony"]
     
-    
+    //backgound image
+    @IBOutlet weak var backgroundImg: UILabel!
     
     @IBOutlet weak var HighScores: UILabel!
     var Scores = [String:Double]()
-    
-    
-    
     @IBOutlet weak var UserList: UIButton!
     @IBOutlet weak var loginoutBtn: UIButton!
     //labels z
@@ -116,6 +114,9 @@ class WelcomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundY.jpg")!)
+        
         //sign In Button
         //loginAndOUT()
         
