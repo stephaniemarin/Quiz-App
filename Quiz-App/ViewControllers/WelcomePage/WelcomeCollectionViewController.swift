@@ -117,14 +117,9 @@ class WelcomeCollectionViewController: UICollectionViewController{
         default:
             return loginCell
         }
-        
-        
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
-    
-        
     }
     
 //    private func generateLayout() ->UICollectionViewLayout{
