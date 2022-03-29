@@ -8,6 +8,7 @@
 import UIKit
 import FacebookCore
 
+//facebook AppDelegate to pull up username and password
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(

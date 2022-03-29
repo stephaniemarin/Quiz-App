@@ -3,7 +3,7 @@
 //  Quiz-App
 //
 //  Created by Stephanie Marin Velasquez on 3/22/22.
-//
+// test commit
 
 import UIKit
 import SwiftUI
@@ -22,7 +22,7 @@ class WelcomeVC: UIViewController {
     
     var USERS:[String] = ["Admin","Horses","Mouse","Giraffe","Elephant","Pony"]
     
-    //backgound image
+    //backgound images for buttons
     @IBOutlet weak var backgroundImg: UILabel!
     
     @IBOutlet weak var HighScores: UILabel!
@@ -50,24 +50,14 @@ class WelcomeVC: UIViewController {
     @IBSegueAction func quiz3UI(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView: quiz3())
     }
-    
 
     @IBSegueAction func gotoUserList(_ coder: NSCoder) -> UIViewController? {
         return UIHostingController(coder: coder, rootView:UserDirectory())
     }
     
-    
-    
-    
     override func viewWillAppear(_ animated: Bool){
         
-        
-        
     super.viewWillAppear(animated)
-        
-        
-        
-        
         
         let defaults = UserDefaults.standard
         let yyy = defaults.object(forKey:"Users")
@@ -76,57 +66,42 @@ class WelcomeVC: UIViewController {
         
        let picket = ["Admin","Horse","Mouse","Giraffe","Elephant","Pony"]
             defaults.set(picket,forKey:"Users")
-            
             let bestGames = ["Admin": 0.0,"Horse":0.95,"Giraffe": 0.93,"Elephant":0.8,"Mouse":0.3,"Pony":0.7]
             defaults.set(bestGames,forKey:"Scores")
-            
             Scores = bestGames
             print("Should put in Scores here")
-            
-            
+
         }
         var top=[Double]()
         for i in Scores.values{top.append(i)}
         let top2 = Array(top.sorted().reversed())
         print (Scores)
         let top3 = top2[0...2]
-      
-        
         var theBest=[String]()
         for (i,j) in Scores { if top3.contains(j) {theBest.append(i)}}
-        
+
         //outputString
-        
         let outputString = "\(theBest[0]): \(Scores[theBest[0]]!) , \(theBest[1]): \(Scores[theBest[1]]!) , \(theBest[2]): \(Scores[theBest[2]]!)"
-        
         HighScores.text = outputString
-      
-        
-        
         UserQuestionsAnswered = defaults.integer(forKey:"UQA")
         UserQuestionsCorrect = defaults.integer(forKey:"UQC")
         print("I entered this method now")
         titleScores.text = "Cumulative Score:  \(UserQuestionsCorrect) / \(UserQuestionsAnswered)"
     }
-    
-    
-    
-    
+
+    //displays all animal users and their score
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "backgroundY.jpg")!)
         
-        //sign In Button
-        //loginAndOUT()
         
-        
-        let defaults = UserDefaults.standard
-        let yyy = defaults.object(forKey:"Users")
-        if yyy == nil {
+            let defaults = UserDefaults.standard
+            let yyy = defaults.object(forKey:"Users")
+            if yyy == nil {
             print("well that is inside of the user defaults")
         
-       let picket = ["Admin","Horse","Mouse","Giraffe","Elephant","Pony"]
+            let picket = ["Admin","Horse","Mouse","Giraffe","Elephant","Pony"]
             defaults.set(picket,forKey:"Users")
             
             let bestGames = ["Admin": 0.0,"Horse":0.95,"Giraffe": 0.93,"Elephant":0.8,"Mouse":0.3,"Pony":0.7]
@@ -134,15 +109,10 @@ class WelcomeVC: UIViewController {
             
             Scores = bestGames
             print("Should put in Scores here")
-            
-            
+        
         }
         
-        
-        
-        
-        
-        
+ 
         createDataBase.isHidden = true
         UserList.isHidden = true
        // let defaults = UserDefaults.standard
