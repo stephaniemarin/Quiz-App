@@ -8,6 +8,8 @@
 import UIKit
 import FacebookCore
 
+
+//facebook sceneDelegate to pull up username and password
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?

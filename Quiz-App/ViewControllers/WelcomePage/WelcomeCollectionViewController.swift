@@ -9,7 +9,7 @@ import UIKit
 import FacebookLogin
 import SwiftUI
 
-
+//This collection view was used to display all the buttons we now have in welcome page.
 class WelcomeCollectionViewController: UICollectionViewController{
     
     var imageData = ["einstain", "swift", "java", "python"]
@@ -20,12 +20,6 @@ class WelcomeCollectionViewController: UICollectionViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.setCollectionViewLayout(generateLayout(), animated: true)
-
-        // Uncomment the following line to preserve selection between presentations
-        //self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-//        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
         func generateLayout() -> UICollectionViewLayout{
             let itemSize = NSCollectionLayoutSize(widthDimension: .fractionalWidth(1.0), heightDimension: .fractionalHeight(0.97))
