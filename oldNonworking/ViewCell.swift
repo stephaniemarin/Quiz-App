@@ -17,5 +17,5 @@ class ViewCell: UICollectionViewCell {
         label.text = name
     }
     
-    
+    //why not delete this
 }
