@@ -4,7 +4,7 @@
 //
 //  Created by stephen weber on 3/15/22.
 //
-
+// animatino reoutine for table effect at 280
 import UIKit
 import SQLite3
 
@@ -29,7 +29,7 @@ class QuizOneTVC: UITableViewController {
     @IBOutlet var tableV: UITableView!
     var whichQuestion : Int = 0
     var TotalQuestions : Int = 0
-  // var quiz = [Quiz]()
+ 
    var holdCell : [UITableViewCell] = []
    var animator : UIDynamicAnimator!
    var gravity: UIGravityBehavior!
@@ -147,22 +147,9 @@ class QuizOneTVC: UITableViewController {
            return
        }
        
+        
        
        
-//
-//       quiz.append(Quiz.init(question: "1 + 1 = ", answers: ["2","5","6","8"],correct: 0))
-//       quiz.append(Quiz.init(question: "7 + 9 = ", answers: ["10","43","16","8"],correct: 2))
-//       quiz.append(Quiz.init(question: "9 + 9 = ", answers: ["34","12","6","18"],correct: 3))
-//       quiz.append(Quiz.init(question: "50 + 11 = ", answers: ["12","5","61","56"],correct: 2))
-//       quiz.append(Quiz.init(question: "22 + 14 = ", answers: ["76","36","58","18"],correct: 1))
-//
-       
-       
-       // Uncomment the following line to preserve selection between presentations
-       // self.clearsSelectionOnViewWillAppear = false
-
-       // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-       // self.navigationItem.rightBarButtonItem = self.editButtonItem
    }
 
     func minutesSeconds(_ seconds: Int) -> String {
@@ -179,25 +166,21 @@ class QuizOneTVC: UITableViewController {
         print(runString)
         self.tableV.headerView(forSection: 0)?.reloadInputViews()
        
-        //_=navigationController?.popToRooViewController(animated: true)
-        //self.dismiss(animated:true,completion:nil)
-        
-        
+       
         
         LABEL!.text = runString
         self.view.addSubview(LABEL!)
     }
     
-    
-   // MARK: - Table view data source
+   
 
    override func numberOfSections(in tableView: UITableView) -> Int {
-       // #warning Incomplete implementation, return the number of sections
+      
        return 1
    }
 
    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       // #warning Incomplete implementation, return the number of rows
+      
         
        return 5//quiz[whichQuestion].answers?.count ?? 4
        
@@ -205,14 +188,11 @@ class QuizOneTVC: UITableViewController {
 
    
    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       // var holdcCell = []
+       
        tableView.allowsSelection = true
        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
        cell.backgroundColor = .yellow
-        cell.textLabel?.text = AllQuiz[whichQuestion][indexPath.row] //quiz[whichQuestion].answers?[indexPath.row]
-
-       
-       //holdCell.append(cell)
+        cell.textLabel?.text = AllQuiz[whichQuestion][indexPath.row]
        
        
        return cell
@@ -224,9 +204,7 @@ class QuizOneTVC: UITableViewController {
        let lbl = UILabel(frame: CGRect(x:15, y:10, width: view.frame.width-15,height: 130))
        lbl.text = quizOneDB[whichQuestion].question
        view.addSubview(lbl)
-     //  let lbl2 = UILabel(frame:CGRect(x:15,y:0,width:view.frame.width,height:30))
-    //   lbl2.text = runString
-     //  view.addSubview(lbl2)
+   
        return view
    
    }
@@ -274,9 +252,7 @@ class QuizOneTVC: UITableViewController {
        else {
            tableView.cellForRow(at:indexPath)?.backgroundColor = .red
            tableView.allowsSelection = false
-        //   tableView.cellForRow(at: tableView.indexPathsForVisibleRows?[1]?).backGroundColor = .green
-        //  how to get an indexPath given known subscript or was indexPath.row
-       //    NextQuestionButton.hidden = false
+      
            
            }
            
@@ -299,16 +275,10 @@ class QuizOneTVC: UITableViewController {
    
    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
    
-//        animator = UIDynamicAnimator(referenceView: tableView)
-//        gravity = UIGravityBehavior(items: [cell])
-//        animator.addBehavior(gravity)
-//        collision = UICollisionBehavior(items: [cell])
-//        collision.translatesReferenceBoundsIntoBoundary = true
-//        animator.addBehavior(collision)
-//        let itemBehavior = UIDynamicItemBehavior(items: [cell])
-//        itemBehavior.elasticity = 0.8
-//        animator.addBehavior(itemBehavior)
-
+ 
+//
+//   Animation for view transitions below.
+//
 
        
        cell.transform = CGAffineTransform(translationX: 0, y: 50)
@@ -337,25 +307,4 @@ class QuizOneTVC: UITableViewController {
    }
 }
 }
-//typealias Animation = (UITableViewCell,IndexPath, UITableView)-> Void
-//
-//
-//final class Animator {
-//    private var hasAnimatedAllCells = false
-//    private let animation: Animation
-//
-//    init(animation: @escaping Animation) {
-//        self.animation = animation
-//    }
-//
-//    func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
-//        guard !hasAnimatedAllCells else {return}
-//
-//        animation(cell,indexPath,tableView)
-//        hasAnimatedAllCells = tableView.isLastVisibleCell(at: indexPath)
-//    }
-//
-//
-//}
-
-
+ 

@@ -36,7 +36,6 @@
 		9030E0D127E369E60026ED31 /* WelcomeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */; };
 		909BFC8527E8D2A200D85D8F /* FacebookCore in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8427E8D2A200D85D8F /* FacebookCore */; };
 		909BFC8727E8D2A200D85D8F /* FacebookLogin in Frameworks */ = {isa = PBXBuildFile; productRef = 909BFC8627E8D2A200D85D8F /* FacebookLogin */; };
-		909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFC8827E8EB3400D85D8F /* Extensions.swift */; };
 		909BFCA627E9CC6C00D85D8F /* quiz3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFCA527E9CC6C00D85D8F /* quiz3.swift */; };
 		909BFCAA27E9D64800D85D8F /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 909BFCA927E9D64800D85D8F /* WelcomeVC.swift */; };
 		D032B45527E3CDAD004EE758 /* PictureTrueFalseDB.db in Resources */ = {isa = PBXBuildFile; fileRef = D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */; };
@@ -91,7 +90,7 @@
 		9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1CollectionViewController.swift; sourceTree = "<group>"; };
 		9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCV1Cell.swift; sourceTree = "<group>"; };
 		9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminDataBaseVC.swift; path = "Quiz-App/AdminDataBaseVC.swift"; sourceTree = SOURCE_ROOT; };
-		9030E09E27E34E6C0026ED31 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionVC.swift; path = "Quiz-App/CollectionVC.swift"; sourceTree = SOURCE_ROOT; };
+		9030E09E27E34E6C0026ED31 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionVC.swift; path = "Quiz-App/ViewControllers/oldNonworking/CollectionVC.swift"; sourceTree = SOURCE_ROOT; };
 		9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOS_QUIZ.entitlements; sourceTree = "<group>"; };
 		9030E0A927E34F350026ED31 /* PayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayVC.swift; path = "Quiz-App/ViewControllers/PayVC.swift"; sourceTree = SOURCE_ROOT; };
 		9030E0AC27E34F660026ED31 /* QuizOneDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOneDB.swift; sourceTree = "<group>"; };
@@ -107,7 +106,6 @@
 		9030E0CB27E367790026ED31 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		9030E0CE27E369E60026ED31 /* WelcomeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewController.swift; sourceTree = "<group>"; };
 		9030E0CF27E369E60026ED31 /* WelcomeCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeCollectionViewCell.swift; sourceTree = "<group>"; };
-		909BFC8827E8EB3400D85D8F /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		909BFCA527E9CC6C00D85D8F /* quiz3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = quiz3.swift; sourceTree = "<group>"; };
 		909BFCA927E9D64800D85D8F /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = PictureTrueFalseDB.db; sourceTree = "<group>"; };
@@ -148,10 +146,12 @@
 		9030E05427E2A4B20026ED31 = {
 			isa = PBXGroup;
 			children = (
+				D086229027F3636700BFE986 /* username...Admin */,
+				D086229127F363A900BFE986 /* 5zeros.password....00000 */,
 				9030E05F27E2A4B20026ED31 /* Quiz-App */,
-				9030E0BF27E35ADF0026ED31 /* QUIZ Section */,
 				9030E07627E2A4B30026ED31 /* Quiz-AppTests */,
 				9030E08027E2A4B30026ED31 /* Quiz-AppUITests */,
+				9030E0D227E391830026ED31 /* oldNonworking */,
 				9030E05E27E2A4B20026ED31 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -169,20 +169,14 @@
 		9030E05F27E2A4B20026ED31 /* Quiz-App */ = {
 			isa = PBXGroup;
 			children = (
-				909BFCA427E9CC4A00D85D8F /* Quiz3 */,
-				9030E0C927E3643D0026ED31 /* Info.plist */,
 				9030E06027E2A4B20026ED31 /* AppDelegate.swift */,
 				9030E06227E2A4B20026ED31 /* SceneDelegate.swift */,
-				D08ED6E627E37783006453C6 /* IOS.sqlite */,
-				D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */,
-				9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */,
-				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
+				D086229227F365B800BFE986 /* SQLite&KeyCahin */,
 				9030E0B227E34F9F0026ED31 /* Login */,
 				9030E09127E2BAC40026ED31 /* ViewControllers */,
 				9030E09027E2B8D00026ED31 /* storyboard */,
 				9030E06927E2A4B30026ED31 /* Assets.xcassets */,
-				909BFCF127ECBE0C00D85D8F /* MQimages */,
-				909BFC8827E8EB3400D85D8F /* Extensions.swift */,
+				9030E0C927E3643D0026ED31 /* Info.plist */,
 			);
 			path = "Quiz-App";
 			sourceTree = "<group>";
@@ -216,10 +210,9 @@
 		9030E09127E2BAC40026ED31 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9030E0BF27E35ADF0026ED31 /* QUIZ Section */,
 				9030E0CD27E369E60026ED31 /* WelcomePage */,
 				9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */,
-				9030E09E27E34E6C0026ED31 /* CollectionVC.swift */,
-				9030E0D227E391830026ED31 /* oldNonworking */,
 				D08ED70227E37B20006453C6 /* FeedbackVC.swift */,
 				9030E0A927E34F350026ED31 /* PayVC.swift */,
 			);
@@ -242,6 +235,7 @@
 		9030E0BF27E35ADF0026ED31 /* QUIZ Section */ = {
 			isa = PBXGroup;
 			children = (
+				909BFCA427E9CC4A00D85D8F /* Quiz3 */,
 				D08ED70D27E37F51006453C6 /* QuizOneTVC.swift */,
 				D08ED6EE27E379EC006453C6 /* QuizTwoVC.swift */,
 				9030E0AC27E34F660026ED31 /* QuizOneDB.swift */,
@@ -264,6 +258,8 @@
 		9030E0D227E391830026ED31 /* oldNonworking */ = {
 			isa = PBXGroup;
 			children = (
+				9030E09E27E34E6C0026ED31 /* CollectionVC.swift */,
+				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
 				9030E09227E2BAF70026ED31 /* LogInViewController.swift */,
 				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
 				9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */,
@@ -281,11 +277,28 @@
 			path = Quiz3;
 			sourceTree = "<group>";
 		};
-		909BFCF127ECBE0C00D85D8F /* MQimages */ = {
+		D086229027F3636700BFE986 /* username...Admin */ = {
 			isa = PBXGroup;
 			children = (
 			);
-			path = MQimages;
+			path = username...Admin;
+			sourceTree = "<group>";
+		};
+		D086229127F363A900BFE986 /* 5zeros.password....00000 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = 5zeros.password....00000;
+			sourceTree = "<group>";
+		};
+		D086229227F365B800BFE986 /* SQLite&KeyCahin */ = {
+			isa = PBXGroup;
+			children = (
+				D08ED6E627E37783006453C6 /* IOS.sqlite */,
+				D032B45427E3CDAD004EE758 /* PictureTrueFalseDB.db */,
+				9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */,
+			);
+			path = "SQLite&KeyCahin";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -455,7 +468,6 @@
 				9030E0AD27E34F660026ED31 /* QuizOneDB.swift in Sources */,
 				9030E09727E2BB270026ED31 /* CategoryViewController.swift in Sources */,
 				D08ED70E27E37F51006453C6 /* QuizOneTVC.swift in Sources */,
-				909BFC8927E8EB3400D85D8F /* Extensions.swift in Sources */,
 				9030E09927E2C2400026ED31 /* Welcome1CollectionViewController.swift in Sources */,
 				D08ED6EF27E379EC006453C6 /* QuizTwoVC.swift in Sources */,
 				9030E0D027E369E60026ED31 /* WelcomeCollectionViewController.swift in Sources */,
