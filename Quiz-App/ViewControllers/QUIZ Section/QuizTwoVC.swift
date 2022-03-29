@@ -4,7 +4,7 @@
 //
 //  Created by stephen weber on 3/16/22.
 //
-
+// animation function at 246 called in test check function at 180
 import UIKit
 import SQLite3
 
@@ -236,7 +236,13 @@ class QuizTwoVC: UIViewController {
         }
  
         }
-       
+    //
+    //
+    // This is the gravity animation part put function in
+    // above for the two possible false results.
+    //
+    
+    //
     func putAnimationHere() {
         
         animator = UIDynamicAnimator(referenceView:self.view)

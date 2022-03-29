@@ -51,11 +51,7 @@ class TableVC: UITableViewController {
         
         
         
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+   
     }
 
     // MARK: - Table view data source
@@ -121,9 +117,7 @@ class TableVC: UITableViewController {
         else {
             tableView.cellForRow(at:indexPath)?.backgroundColor = .red
             tableView.allowsSelection = false
-          //  tableView.cellForRow(at: tableView.indexPathsForVisibleRows?[1]?).backGroundColor = .green
-          // how to get an indexPath given known subscript or was indexPath.row
-            //NextQuestionButton.hidden = false
+       
             
             }
             
@@ -146,17 +140,7 @@ class TableVC: UITableViewController {
     
     override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
     
-//        animator = UIDynamicAnimator(referenceView: tableView)
-//        gravity = UIGravityBehavior(items: [cell]])
-//        animator.addBehavior(gravity)
-//        collision = UICollisionBehavior(items: [cell]])
-//        collision.translatesReferenceBoundsIntoBoundary = true
-//        animator.addBehavior(collision)
-//        let itemBehavior = UIDynamicItemBehavior(items: [cell]])
-//        itemBehavior.elasticity = 0.8
-//        animator.addBehavior(itemBehavior)
-//
-//
+
         
         cell.transform = CGAffineTransform(translationX: 0, y: 50)
         cell.alpha = 0
@@ -184,24 +168,4 @@ class TableVC: UITableViewController {
     }
 }
 }
-//typealias Animation = (UITableViewCell,IndexPath, UITableView)-> Void
-//
-//
-//final class Animator {
-//    private var hasAnimatedAllCells = false
-//    private let animation: Animation
-//
-//    init(animation: @escaping Animation) {
-//        self.animation = animation
-//    }
-//
-//    func animate(cell: UITableViewCell, at indexPath: IndexPath, in tableView: UITableView) {
-//        guard !hasAnimatedAllCells else {return}
-//
-//        animation(cell,indexPath,tableView)
-//        hasAnimatedAllCells = tableView.isLastVisibleCell(at: indexPath)
-//    }
-//
-//
-//}
-//
+
