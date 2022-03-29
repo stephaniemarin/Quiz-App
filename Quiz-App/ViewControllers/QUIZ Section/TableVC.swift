@@ -158,14 +158,6 @@ class TableVC: UITableViewController {
         }
         
     
-    
-    
-    @IBAction func GOTOHERE(_ sender: Any) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-                if let vc = storyboard.instantiateViewController(withIdentifier: "CollectionCenter") as? CollectionVC {
-            self.present(vc,animated:true)
-         
-    }
-}
+  
 }
 

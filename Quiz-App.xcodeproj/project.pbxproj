@@ -20,7 +20,6 @@
 		9030E09927E2C2400026ED31 /* Welcome1CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */; };
 		9030E09B27E2C2EB0026ED31 /* WelcomeCV1Cell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */; };
 		9030E09D27E34D280026ED31 /* AdminDataBaseVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */; };
-		9030E09F27E34E6C0026ED31 /* CollectionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E09E27E34E6C0026ED31 /* CollectionVC.swift */; };
 		9030E0AB27E34F3F0026ED31 /* PayVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0A927E34F350026ED31 /* PayVC.swift */; };
 		9030E0AD27E34F660026ED31 /* QuizOneDB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0AC27E34F660026ED31 /* QuizOneDB.swift */; };
 		9030E0B127E34F7B0026ED31 /* ViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9030E0B027E34F7B0026ED31 /* ViewCell.swift */; };
@@ -90,7 +89,6 @@
 		9030E09827E2C2400026ED31 /* Welcome1CollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Welcome1CollectionViewController.swift; sourceTree = "<group>"; };
 		9030E09A27E2C2EB0026ED31 /* WelcomeCV1Cell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeCV1Cell.swift; sourceTree = "<group>"; };
 		9030E09C27E34D280026ED31 /* AdminDataBaseVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AdminDataBaseVC.swift; path = "Quiz-App/AdminDataBaseVC.swift"; sourceTree = SOURCE_ROOT; };
-		9030E09E27E34E6C0026ED31 /* CollectionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CollectionVC.swift; path = "Quiz-App/ViewControllers/oldNonworking/CollectionVC.swift"; sourceTree = SOURCE_ROOT; };
 		9030E0A427E34ED20026ED31 /* IOS_QUIZ.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOS_QUIZ.entitlements; sourceTree = "<group>"; };
 		9030E0A927E34F350026ED31 /* PayVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PayVC.swift; path = "Quiz-App/ViewControllers/PayVC.swift"; sourceTree = SOURCE_ROOT; };
 		9030E0AC27E34F660026ED31 /* QuizOneDB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuizOneDB.swift; sourceTree = "<group>"; };
@@ -258,7 +256,6 @@
 		9030E0D227E391830026ED31 /* oldNonworking */ = {
 			isa = PBXGroup;
 			children = (
-				9030E09E27E34E6C0026ED31 /* CollectionVC.swift */,
 				9030E0B027E34F7B0026ED31 /* ViewCell.swift */,
 				9030E09227E2BAF70026ED31 /* LogInViewController.swift */,
 				9030E09427E2BB090026ED31 /* SingUpViewController.swift */,
@@ -454,7 +451,6 @@
 				9030E09527E2BB090026ED31 /* SingUpViewController.swift in Sources */,
 				9030E0BB27E34F9F0026ED31 /* KeychainWrapper.swift in Sources */,
 				9030E0D127E369E60026ED31 /* WelcomeCollectionViewCell.swift in Sources */,
-				9030E09F27E34E6C0026ED31 /* CollectionVC.swift in Sources */,
 				9030E0BE27E34F9F0026ED31 /* KeychainItemAccessibility.swift in Sources */,
 				909BFCA627E9CC6C00D85D8F /* quiz3.swift in Sources */,
 				9030E0BC27E34F9F0026ED31 /* CreateAccountVC.swift in Sources */,
@@ -648,6 +644,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5DP45YCU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quiz-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -675,6 +672,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = T5DP45YCU9;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Quiz-App/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
