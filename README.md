@@ -29,11 +29,33 @@ List of features ready and TODOs for future development
 > log in as Admin with (Admin) and (00000) for password
 
 
-- Images of what it should look like
+## Quiz App Images
+> Admin Home:  
+> 
+![app icon](QuizAppImages/AdminHome.png)
 
-## Usage
+> ADMIN CREATE DATABASE:  
+> 
+![app icon](https://github.com/stephaniemarin/Quiz-App/blob/96110b9cf877d3c8396789cd3a9accb1d4b17f1a/QuizAppImages/AdminCreate%20Database.png)
 
-> Here, you instruct other people on how to use your project after they’ve installed it. This would also be a good place to include screenshots of your project in action.
+> User Home:
+> 
+![app icon](QuizAppImages/UserHome.png)
+
+> Quiz Advance SwiftUI:
+> 
+![app icon](QuizAppImages/quiz2.png)
+
+> Wrong Answer:
+> 
+![app icon](QuizAppImages/AnimationWrongAnswer.png)
+
+> Voice to Text Feedback:
+> 
+![app icon](QuizAppImages/voiceFeedback.png)
+
+
+
 
 ## Contributors
 
