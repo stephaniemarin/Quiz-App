@@ -28,10 +28,7 @@ List of features ready and TODOs for future development
 * Use the Admin and password below for interacting as a Manager.
 > log in as Admin with (Admin) and (00000) for password
 
-> Be sure to include BOTH Windows and Unix command  
-> Be sure to mention if the commands only work on a specific platform (eg. AWS, GCP)
 
-- All the `code` required to get started
 - Images of what it should look like
 
 ## Usage
@@ -41,9 +38,8 @@ List of features ready and TODOs for future development
 ## Contributors
 
 > Stephen Weber
+> 
 > Stephanie Marin
 
-## License
-
-This project uses the following license: [<license_name>](<link>).
+## Thank you :)
 
